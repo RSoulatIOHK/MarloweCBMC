@@ -1,0 +1,1 @@
+int makeDeposit(ContractState* state, const Transaction* candidateTransaction, const DepositParameters* depositPayload);

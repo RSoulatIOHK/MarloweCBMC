@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invoice Template Design</title>
+	<link rel="stylesheet" type="text/css" href="G:\IOG\invoicing\template\styles.css">
+</head>
+<body>
+​
+<div class="wrapper">
+	<div class="invoice_wrapper">
+		<div class="header">
+			<div class="logo_invoice_wrap">
+				<div class="logo_sec">
+					<img src="G:\IOG\invoicing\iohk-symbol-big.png"
+                         alt="IOHK logo"
+                         width="25%"
+                         height="auto">
+​
+​
+					<div class="title_wrap">
+						<p class="title bold">IOG Singapore Pte Ltd</p>
+						<p class="sub_title">4 Battery Road</p>
+                        <p class="sub_title">25-01 Bank of China Building</p>
+                        <p class="sub_title">Singapore 049908</p>
+                        <p class="sub_title">Singapore</p>
+					</div>
+				</div>
+				<div class="invoice_sec">
+					<p class="invoice bold">INVOICE</p>
+					<p class="invoice_no">
+						<span class="bold">Invoice</span>
+						<span>{{ invoice_number }}</span>
+					</p>
+					<p class="date">
+						<span class="bold">Date</span>
+						<span>{{ date }}</span>
+					</p>
+				</div>
+			</div>
+			<div class="bill_total_wrap">
+				<div class="bill_sec">
+					<p>Bill To</p> 
+	          		<p class="bold name">{{ billed_company }}</p>
+			        <span>
+			           {{ billed_address }}<br/>
+			           {{ billed_phone }}
+			        </span>
+				</div>
+			</div>
+		</div>
+		<div class="body">
+			<div class="main_table">
+				<div class="table_header">
+					<div class="row">
+						<div class="col col_no">NO.</div>
+						<div class="col col_des">ITEM DESCRIPTION</div>
+						<div class="col col_price">RATE</div>
+						<div class="col col_qty">QTY</div>
+						<div class="col col_total">TOTAL</div>
+					</div>
+				</div>
+				<div class="table_body">
+					<div class="row">
+						<div class="col col_no">
+							<p>{{ line_num }}</p>
+						</div>
+						<div class="col col_des">
+							<p class="bold">{{ item }}</p>
+							<p>{{ item_description }}</p>
+						</div>
+						<div class="col col_price">
+							<p>{{ price_line }}</p>
+						</div>
+						<div class="col col_qty">
+							<p>{{ qty }}</p>
+						</div>
+						<div class="col col_total">
+							<p>{{ total_line_price }}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="paymethod_grandtotal_wrap">
+				<div class="paymethod_sec">
+					<p class="bold">Payment Method</p>
+					<p>{{ num_ada }} Ada sent to {{ application_wallet_address }}</p>
+                    <p>Transaction ID: {{ transaction_id }}</p>
+                    <p>Conversion rate: {{ conversion_rate }}</p>
+				</div>
+				<div class="grandtotal_sec">
+			        <p class="bold">
+			            <span>SUB TOTAL</span>
+			            <span>{{ price_vat_less }}</span>
+			        </p>
+			        <p>
+			            <span>Tax Vat</span>
+			            <span>{{ total_vat }}</span>
+			        </p>
+			       	<p class="bold">
+			            <span>Total</span>
+			            <span>{{ total }}</span>
+			        </p>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p>{{ footer }}</p>
+			<div class="terms">
+		        <p class="tc bold">Terms & Coditions</p>
+		        <p>{{ t_and_c }}</p>
+		    </div>
+		</div>
+	</div>
+</div>
+​
+​
+</body>
+</html>

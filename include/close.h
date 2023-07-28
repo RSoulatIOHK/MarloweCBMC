@@ -1,0 +1,1 @@
+void processClose(ContractState* state);

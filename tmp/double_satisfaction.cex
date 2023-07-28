@@ -1,0 +1,1122 @@
+CBMC version 5.87.0 (cbmc-5.87.0) 64-bit x86_64 linux
+Parsing utxo_cbmc.c
+Converting
+Type-checking utxo_cbmc
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Removal of function pointers and virtual functions
+Generic Property Instrumentation
+Performing a full slice
+Running with 10 object bits, 54 offset bits (user-specified)
+Starting Bounded Model Checking
+Unwinding loop initializeActors.0 iteration 1 file utxo_cbmc.c line 308 function initializeActors thread 0
+Unwinding loop initializeActors.0 iteration 2 file utxo_cbmc.c line 308 function initializeActors thread 0
+Unwinding loop initiateSwap.0 iteration 1 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 2 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 3 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 4 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 5 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop createTransferTransaction.1 iteration 1 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 1 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop initTransaction.0 iteration 1 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 2 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 3 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 4 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 5 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 1 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 2 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 3 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 4 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 5 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 1 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 2 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 3 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 4 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 5 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 6 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 7 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 8 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 9 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 10 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Not unwinding loop createTransferTransaction.1 iteration 11 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 1 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 2 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 3 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 4 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 5 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 6 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 7 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 8 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 9 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 10 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Not unwinding loop createTransferTransaction.3 iteration 11 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop main.2 iteration 1 file utxo_cbmc.c line 413 function main thread 0
+Unwinding loop initiateSwap.0 iteration 1 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 2 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 3 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 4 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 5 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop createTransferTransaction.1 iteration 1 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 1 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop initTransaction.0 iteration 1 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 2 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 3 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 4 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 5 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 1 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 2 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 3 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 4 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 5 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 1 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 2 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 3 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 4 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 5 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 6 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 7 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 8 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 9 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 10 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Not unwinding loop createTransferTransaction.1 iteration 11 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 1 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 2 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 3 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 4 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 5 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 6 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 7 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 8 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 9 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 10 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Not unwinding loop createTransferTransaction.3 iteration 11 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop main.2 iteration 2 file utxo_cbmc.c line 413 function main thread 0
+Unwinding loop initiateSwap.0 iteration 1 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 2 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 3 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 4 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 5 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop createTransferTransaction.1 iteration 1 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 1 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop initTransaction.0 iteration 1 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 2 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 3 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 4 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 5 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 1 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 2 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 3 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 4 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 5 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 1 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 2 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 3 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 4 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 5 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 6 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 7 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 8 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 9 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 10 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Not unwinding loop createTransferTransaction.1 iteration 11 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 1 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 2 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 3 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 4 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 5 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 6 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 7 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 8 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 9 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 10 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Not unwinding loop createTransferTransaction.3 iteration 11 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop main.2 iteration 3 file utxo_cbmc.c line 413 function main thread 0
+Unwinding loop initiateSwap.0 iteration 1 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 2 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 3 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 4 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 5 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop createTransferTransaction.1 iteration 1 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 1 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop initTransaction.0 iteration 1 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 2 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 3 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 4 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 5 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 1 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 2 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 3 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 4 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 5 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 1 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 2 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 3 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 4 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 5 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 6 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 7 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 8 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 9 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 10 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Not unwinding loop createTransferTransaction.1 iteration 11 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 1 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 2 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 3 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 4 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 5 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 6 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 7 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 8 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 9 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 10 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Not unwinding loop createTransferTransaction.3 iteration 11 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop main.2 iteration 4 file utxo_cbmc.c line 413 function main thread 0
+Unwinding loop initiateSwap.0 iteration 1 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 2 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 3 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 4 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop initiateSwap.0 iteration 5 file utxo_cbmc.c line 319 function initiateSwap thread 0
+Unwinding loop createTransferTransaction.1 iteration 1 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 1 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop initTransaction.0 iteration 1 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 2 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 3 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 4 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.0 iteration 5 file utxo_cbmc.c line 371 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 1 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 2 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 3 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 4 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop initTransaction.1 iteration 5 file utxo_cbmc.c line 377 function initTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 1 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 2 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 3 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 4 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 5 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 6 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 7 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 8 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 9 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.1 iteration 10 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Not unwinding loop createTransferTransaction.1 iteration 11 file utxo_cbmc.c line 130 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 1 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 2 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 3 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 4 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 5 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 6 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 7 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 8 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 9 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop createTransferTransaction.3 iteration 10 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Not unwinding loop createTransferTransaction.3 iteration 11 file utxo_cbmc.c line 163 function createTransferTransaction thread 0
+Unwinding loop main.2 iteration 5 file utxo_cbmc.c line 413 function main thread 0
+Runtime Symex: 0.479267s
+size of program expression: 11071 steps
+simple slicing removed 24 assignments
+Generated 85 VCC(s), 1 remaining after simplification
+Runtime Postprocess Equation: 0.00569825s
+Passing problem to propositional reduction
+converting SSA
+Runtime Convert SSA: 0.105302s
+Running propositional reduction
+Post-processing
+Runtime Post-process: 9.623e-06s
+Solving with MiniSAT 2.2.1 without simplifier
+132227 variables, 127222 clauses
+SAT checker: instance is SATISFIABLE
+Runtime Solver: 0.0277792s
+Runtime decision procedure: 0.135921s
+Building error trace
+
+** Results:
+<builtin-library-malloc> function malloc
+[malloc.assertion.1] line 31 max allocation size exceeded: SUCCESS
+[malloc.assertion.2] line 36 max allocation may fail: SUCCESS
+
+<builtin-library-realloc> function realloc
+[realloc.precondition_instance.1] line 20 free argument must be NULL or valid pointer: SUCCESS
+[realloc.precondition_instance.2] line 20 free argument must be dynamic object: SUCCESS
+[realloc.precondition_instance.3] line 20 free argument has offset zero: SUCCESS
+[realloc.precondition_instance.4] line 20 double free: SUCCESS
+[realloc.precondition_instance.5] line 20 free called for new[] object: SUCCESS
+[realloc.precondition_instance.6] line 20 free called for stack-allocated object: SUCCESS
+[realloc.precondition_instance.7] line 30 free argument must be NULL or valid pointer: SUCCESS
+[realloc.precondition_instance.8] line 30 free argument must be dynamic object: SUCCESS
+[realloc.precondition_instance.9] line 30 free argument has offset zero: SUCCESS
+[realloc.precondition_instance.10] line 30 double free: SUCCESS
+[realloc.precondition_instance.11] line 30 free called for new[] object: SUCCESS
+[realloc.precondition_instance.12] line 30 free called for stack-allocated object: SUCCESS
+
+utxo_cbmc.c function addUTxOToLedger
+[addUTxOToLedger.precondition_instance.1] line 56 realloc argument is dynamic object: SUCCESS
+
+utxo_cbmc.c function main
+[main.assertion.1] line 456 Cannot steal: FAILURE
+[main.precondition_instance.1] line 458 free argument must be NULL or valid pointer: SUCCESS
+[main.precondition_instance.2] line 458 free argument must be dynamic object: SUCCESS
+[main.precondition_instance.3] line 458 free argument has offset zero: SUCCESS
+[main.precondition_instance.4] line 458 double free: SUCCESS
+[main.precondition_instance.5] line 458 free called for new[] object: SUCCESS
+[main.precondition_instance.6] line 458 free called for stack-allocated object: SUCCESS
+[main.precondition_instance.7] line 461 free argument must be NULL or valid pointer: SUCCESS
+[main.precondition_instance.8] line 461 free argument must be dynamic object: SUCCESS
+[main.precondition_instance.9] line 461 free argument has offset zero: SUCCESS
+[main.precondition_instance.10] line 461 double free: SUCCESS
+[main.precondition_instance.11] line 461 free called for new[] object: SUCCESS
+[main.precondition_instance.12] line 461 free called for stack-allocated object: SUCCESS
+
+Trace for main.assertion.1:
+
+↳ utxo_cbmc.c:403 main()
+
+↳ utxo_cbmc.c:405 createLedger()
+
+↳ utxo_cbmc.c:183 malloc(sizeof(Ledger) /*16ul*/ )
+  43: dynamic_object={ .unspentTransactions=((UTxO **)NULL), .numTransactions=0, .$pad2=0 } ({ 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object.unspentTransactions=((UTxO **)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object.numTransactions=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object.$pad2=0 (00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object.unspentTransactions (00000000 10000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  183: ledger=&dynamic_object (00000000 10000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  184: dynamic_object.unspentTransactions=((UTxO **)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  185: dynamic_object.numTransactions=0 (00000000 00000000 00000000 00000000)
+↵
+  405: ledger=&dynamic_object (00000000 10000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  407: tokenAmounts=20 (00000000 00000000 00000000 00010100)
+  408: initTokens=100 (00000000 00000000 00000000 01100100)
+
+↳ utxo_cbmc.c:409 initializeActors(&dynamic_object, 2, 100)
+  308: i=1 (00000000 00000000 00000000 00000001)
+
+↳ utxo_cbmc.c:310 createUTxO(1, 100)
+
+↳ utxo_cbmc.c:63 malloc(sizeof(UTxO) /*24ul*/ )
+  43: dynamic_object$0={ .spent=0, .ownerID=0, .isScript=FALSE, .$pad3=0,
+    .datum={ .originID=0, .amountToken1=0 }, .amount=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000, 00000000, 00000000 00000000 00000000, { 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$0.spent=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$0.ownerID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$0.isScript=FALSE (00000000)
+  43: dynamic_object$0.$pad3=0 (00000000 00000000 00000000)
+  43: dynamic_object$0.datum={ .originID=0, .amountToken1=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$0.datum.originID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$0.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$0.amount=0 (00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$0.spent (00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  63: utxo=&dynamic_object$0 (00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  64: dynamic_object$0.spent=0 (00000000 00000000 00000000 00000000)
+  65: dynamic_object$0.ownerID=1 (00000000 00000000 00000000 00000001)
+  66: dynamic_object$0.isScript=FALSE (00000000)
+  67: dynamic_object$0.amount=100 (00000000 00000000 00000000 01100100)
+  68: dynamic_object$0.datum.amountToken1=100 (00000000 00000000 00000000 01100100)
+  69: dynamic_object$0.datum.originID=1 (00000000 00000000 00000000 00000001)
+↵
+  310: utxo=&dynamic_object$0 (00000000 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:312 addUTxOToLedger(&dynamic_object, &dynamic_object$0)
+
+↳ utxo_cbmc.c:56 realloc(NULL, 8ul)
+
+↳ <builtin-library-realloc>:14 malloc(8ul)
+  43: dynamic_object$1=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$1 (00000001 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+↵
+↵
+  308: i=2 (00000000 00000000 00000000 00000010)
+
+↳ utxo_cbmc.c:310 createUTxO(2, 100)
+
+↳ utxo_cbmc.c:63 malloc(sizeof(UTxO) /*24ul*/ )
+  43: dynamic_object$2={ .spent=0, .ownerID=0, .isScript=FALSE, .$pad3=0,
+    .datum={ .originID=0, .amountToken1=0 }, .amount=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000, 00000000, 00000000 00000000 00000000, { 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$2.spent=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$2.ownerID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$2.isScript=FALSE (00000000)
+  43: dynamic_object$2.$pad3=0 (00000000 00000000 00000000)
+  43: dynamic_object$2.datum={ .originID=0, .amountToken1=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$2.datum.originID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$2.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$2.amount=0 (00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$2.spent (00000001 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  63: utxo=&dynamic_object$2 (00000001 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  64: dynamic_object$2.spent=0 (00000000 00000000 00000000 00000000)
+  65: dynamic_object$2.ownerID=2 (00000000 00000000 00000000 00000010)
+  66: dynamic_object$2.isScript=FALSE (00000000)
+  67: dynamic_object$2.amount=100 (00000000 00000000 00000000 01100100)
+  68: dynamic_object$2.datum.amountToken1=100 (00000000 00000000 00000000 01100100)
+  69: dynamic_object$2.datum.originID=2 (00000000 00000000 00000000 00000010)
+↵
+  310: utxo=&dynamic_object$2 (00000001 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:312 addUTxOToLedger(&dynamic_object, &dynamic_object$2)
+
+↳ utxo_cbmc.c:56 realloc(NULL, 8ul)
+
+↳ <builtin-library-realloc>:14 malloc(8ul)
+  43: dynamic_object$3=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$3 (00000001 10000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+↵
+↵
+  308: i=3 (00000000 00000000 00000000 00000011)
+↵
+  411: num_actions=5 (00000000 00000000 00000000 00000101)
+  413: choice_num=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:414 constr_nondet_int(1, 2)
+↵
+  414: choice=1 (00000000 00000000 00000000 00000001)
+
+↳ utxo_cbmc.c:419 constr_nondet_int(1, 2)
+↵
+  419: swapOwner=1 (00000000 00000000 00000000 00000001)
+
+↳ utxo_cbmc.c:420 initiateSwap(&dynamic_object, 1, 20)
+
+↳ utxo_cbmc.c:318 malloc(sizeof(UTxO *) * 5ul /*40ul*/ )
+  43: dynamic_object$4={ ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL) } ({ 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$4[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$4[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$4[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$4[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$4[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)dynamic_object$4 (00000001 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  318: utxosToSpend=dynamic_object$4 (00000001 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  319: i=0 (00000000 00000000 00000000 00000000)
+  320: dynamic_object$4[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  319: i=1 (00000000 00000000 00000000 00000001)
+  320: dynamic_object$4[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  319: i=2 (00000000 00000000 00000000 00000010)
+  320: dynamic_object$4[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  319: i=3 (00000000 00000000 00000000 00000011)
+  320: dynamic_object$4[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  319: i=4 (00000000 00000000 00000000 00000100)
+  320: dynamic_object$4[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  319: i=5 (00000000 00000000 00000000 00000101)
+  322: numTransactions=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:324 getUnspentTransactionsByID(&dynamic_object, 1, &numTransactions!0@1)
+  250: count=0 (00000000 00000000 00000000 00000000)
+  251: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:259 malloc(0ul)
+  43: dynamic_object$5={  } ( })
+  43: malloc_res=(const void *)&dynamic_object$5 (00000010 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  259: unspentTransactions=(UTxO **)&dynamic_object$5 (00000010 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  265: index=0 (00000000 00000000 00000000 00000000)
+  266: i=0 (00000000 00000000 00000000 00000000)
+  275: numTransactions=0 (00000000 00000000 00000000 00000000)
+↵
+  324: ptrToUtxos=(UTxO **)&dynamic_object$5 (00000010 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  326: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:331 malloc(sizeof(UTxO) /*24ul*/ )
+  43: dynamic_object$6={ .spent=0, .ownerID=0, .isScript=FALSE, .$pad3=0,
+    .datum={ .originID=0, .amountToken1=0 }, .amount=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000, 00000000, 00000000 00000000 00000000, { 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$6.spent=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$6.ownerID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$6.isScript=FALSE (00000000)
+  43: dynamic_object$6.$pad3=0 (00000000 00000000 00000000)
+  43: dynamic_object$6.datum={ .originID=0, .amountToken1=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$6.datum.originID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$6.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$6.amount=0 (00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$6.spent (00000010 10000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+
+↳ utxo_cbmc.c:344 createTransferTransaction(&dynamic_object, 1, dynamic_object$4, 0, outputUtxos!0@1, 1)
+  114: useScriptAddress=FALSE (00000000)
+  118: i=0 (00000000 00000000 00000000 00000000)
+  129: tokenAmount=0 (00000000 00000000 00000000 00000000)
+  130: i=0 (00000000 00000000 00000000 00000000)
+  131: tokenAmount=0 (00000000 00000000 00000000 00000000)
+  130: i=1 (00000000 00000000 00000000 00000001)
+  135: tokenBalance=0 (00000000 00000000 00000000 00000000)
+  136: i=0 (00000000 00000000 00000000 00000000)
+  163: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:164 addUTxOToLedger(&dynamic_object, ((UTxO *)NULL))
+
+↳ utxo_cbmc.c:56 realloc(NULL, 8ul)
+
+↳ <builtin-library-realloc>:14 malloc(8ul)
+  43: dynamic_object$7=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$7 (00000011 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+↵
+↵
+  163: i=1 (00000000 00000000 00000000 00000001)
+  168: unspentToken=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:170 createUTxO(1, 0)
+
+↳ utxo_cbmc.c:63 malloc(sizeof(UTxO) /*24ul*/ )
+  43: dynamic_object$8={ .spent=0, .ownerID=0, .isScript=FALSE, .$pad3=0,
+    .datum={ .originID=0, .amountToken1=0 }, .amount=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000, 00000000, 00000000 00000000 00000000, { 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$8.spent=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$8.ownerID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$8.isScript=FALSE (00000000)
+  43: dynamic_object$8.$pad3=0 (00000000 00000000 00000000)
+  43: dynamic_object$8.datum={ .originID=0, .amountToken1=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$8.datum.originID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$8.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$8.amount=0 (00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$8.spent (00000011 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  63: utxo=&dynamic_object$8 (00000011 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  64: dynamic_object$8.spent=0 (00000000 00000000 00000000 00000000)
+  65: dynamic_object$8.ownerID=1 (00000000 00000000 00000000 00000001)
+  66: dynamic_object$8.isScript=FALSE (00000000)
+  67: dynamic_object$8.amount=0 (00000000 00000000 00000000 00000000)
+  68: dynamic_object$8.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  69: dynamic_object$8.datum.originID=1 (00000000 00000000 00000000 00000001)
+↵
+  170: backUTxO=&dynamic_object$8 (00000011 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:174 addUTxOToLedger(&dynamic_object, &dynamic_object$8)
+
+↳ utxo_cbmc.c:56 realloc(NULL, 8ul)
+
+↳ <builtin-library-realloc>:14 malloc(8ul)
+  43: dynamic_object$9=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$9 (00000011 10000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+↵
+↵
+↵
+↵
+  413: choice_num=1 (00000000 00000000 00000000 00000001)
+
+↳ utxo_cbmc.c:414 constr_nondet_int(1, 2)
+↵
+  414: choice=1 (00000000 00000000 00000000 00000001)
+
+↳ utxo_cbmc.c:419 constr_nondet_int(1, 2)
+↵
+  419: swapOwner=1 (00000000 00000000 00000000 00000001)
+
+↳ utxo_cbmc.c:420 initiateSwap(&dynamic_object, 1, 20)
+
+↳ utxo_cbmc.c:318 malloc(sizeof(UTxO *) * 5ul /*40ul*/ )
+  43: dynamic_object$32={ ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL) } ({ 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$32[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$32[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$32[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$32[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$32[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)dynamic_object$32 (00001001 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  318: utxosToSpend=dynamic_object$32 (00001001 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  319: i=0 (00000000 00000000 00000000 00000000)
+  320: dynamic_object$32[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  319: i=1 (00000000 00000000 00000000 00000001)
+  320: dynamic_object$32[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  319: i=2 (00000000 00000000 00000000 00000010)
+  320: dynamic_object$32[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  319: i=3 (00000000 00000000 00000000 00000011)
+  320: dynamic_object$32[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  319: i=4 (00000000 00000000 00000000 00000100)
+  320: dynamic_object$32[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  319: i=5 (00000000 00000000 00000000 00000101)
+  322: numTransactions=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:324 getUnspentTransactionsByID(&dynamic_object, 1, &numTransactions!0@2)
+  250: count=0 (00000000 00000000 00000000 00000000)
+  251: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:259 malloc(0ul)
+  43: dynamic_object$33={  } ( })
+  43: malloc_res=(const void *)&dynamic_object$33 (00001010 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  259: unspentTransactions=(UTxO **)&dynamic_object$33 (00001010 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  265: index=0 (00000000 00000000 00000000 00000000)
+  266: i=0 (00000000 00000000 00000000 00000000)
+  275: numTransactions=0 (00000000 00000000 00000000 00000000)
+↵
+  324: ptrToUtxos=(UTxO **)&dynamic_object$33 (00001010 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  326: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:331 malloc(sizeof(UTxO) /*24ul*/ )
+  43: dynamic_object$34={ .spent=0, .ownerID=0, .isScript=FALSE, .$pad3=0,
+    .datum={ .originID=0, .amountToken1=0 }, .amount=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000, 00000000, 00000000 00000000 00000000, { 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$34.spent=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$34.ownerID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$34.isScript=FALSE (00000000)
+  43: dynamic_object$34.$pad3=0 (00000000 00000000 00000000)
+  43: dynamic_object$34.datum={ .originID=0, .amountToken1=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$34.datum.originID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$34.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$34.amount=0 (00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$34.spent (00001010 10000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+
+↳ utxo_cbmc.c:344 createTransferTransaction(&dynamic_object, 1, dynamic_object$32, 0, outputUtxos!0@2, 1)
+  114: useScriptAddress=FALSE (00000000)
+  118: i=0 (00000000 00000000 00000000 00000000)
+  129: tokenAmount=0 (00000000 00000000 00000000 00000000)
+  130: i=0 (00000000 00000000 00000000 00000000)
+  131: tokenAmount=0 (00000000 00000000 00000000 00000000)
+  130: i=1 (00000000 00000000 00000000 00000001)
+  135: tokenBalance=0 (00000000 00000000 00000000 00000000)
+  136: i=0 (00000000 00000000 00000000 00000000)
+  163: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:164 addUTxOToLedger(&dynamic_object, ((UTxO *)NULL))
+
+↳ utxo_cbmc.c:56 realloc(NULL, 8ul)
+
+↳ <builtin-library-realloc>:14 malloc(8ul)
+  43: dynamic_object$35=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$35 (00001011 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+↵
+↵
+  163: i=1 (00000000 00000000 00000000 00000001)
+  168: unspentToken=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:170 createUTxO(1, 0)
+
+↳ utxo_cbmc.c:63 malloc(sizeof(UTxO) /*24ul*/ )
+  43: dynamic_object$36={ .spent=0, .ownerID=0, .isScript=FALSE, .$pad3=0,
+    .datum={ .originID=0, .amountToken1=0 }, .amount=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000, 00000000, 00000000 00000000 00000000, { 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$36.spent=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$36.ownerID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$36.isScript=FALSE (00000000)
+  43: dynamic_object$36.$pad3=0 (00000000 00000000 00000000)
+  43: dynamic_object$36.datum={ .originID=0, .amountToken1=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$36.datum.originID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$36.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$36.amount=0 (00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$36.spent (00001011 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  63: utxo=&dynamic_object$36 (00001011 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  64: dynamic_object$36.spent=0 (00000000 00000000 00000000 00000000)
+  65: dynamic_object$36.ownerID=1 (00000000 00000000 00000000 00000001)
+  66: dynamic_object$36.isScript=FALSE (00000000)
+  67: dynamic_object$36.amount=0 (00000000 00000000 00000000 00000000)
+  68: dynamic_object$36.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  69: dynamic_object$36.datum.originID=1 (00000000 00000000 00000000 00000001)
+↵
+  170: backUTxO=&dynamic_object$36 (00001011 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:174 addUTxOToLedger(&dynamic_object, &dynamic_object$36)
+
+↳ utxo_cbmc.c:56 realloc(NULL, 8ul)
+
+↳ <builtin-library-realloc>:14 malloc(8ul)
+  43: dynamic_object$37=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$37 (00001011 10000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+↵
+↵
+↵
+↵
+  413: choice_num=2 (00000000 00000000 00000000 00000010)
+
+↳ utxo_cbmc.c:414 constr_nondet_int(1, 2)
+↵
+  414: choice=2 (00000000 00000000 00000000 00000010)
+
+↳ utxo_cbmc.c:426 constr_nondet_int(1, 2)
+↵
+  426: senderId=1 (00000000 00000000 00000000 00000001)
+
+↳ utxo_cbmc.c:428 initTransaction(&transaction!0@3, 1)
+  365: transaction.numInputs=0 (00000000 00000000 00000000 00000000)
+  366: transaction.numOutputs=0 (00000000 00000000 00000000 00000000)
+  367: transaction.signerID=1 (00000000 00000000 00000000 00000001)
+
+↳ utxo_cbmc.c:370 malloc(sizeof(UTxO *) * 5ul /*40ul*/ )
+  43: dynamic_object$66={ ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL) } ({ 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$66[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$66[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$66[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$66[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$66[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)dynamic_object$66 (00010100 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  370: transaction.inputs=dynamic_object$66 (00010100 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=0 (00000000 00000000 00000000 00000000)
+  372: dynamic_object$66[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=1 (00000000 00000000 00000000 00000001)
+  372: dynamic_object$66[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=2 (00000000 00000000 00000000 00000010)
+  372: dynamic_object$66[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=3 (00000000 00000000 00000000 00000011)
+  372: dynamic_object$66[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=4 (00000000 00000000 00000000 00000100)
+  372: dynamic_object$66[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=5 (00000000 00000000 00000000 00000101)
+
+↳ utxo_cbmc.c:376 malloc(sizeof(UTxO *) * 5ul /*40ul*/ )
+  43: dynamic_object$67={ ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL) } ({ 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$67[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$67[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$67[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$67[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$67[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)dynamic_object$67 (00010100 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  376: transaction.outputs=dynamic_object$67 (00010100 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=0 (00000000 00000000 00000000 00000000)
+  378: dynamic_object$67[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=1 (00000000 00000000 00000000 00000001)
+  378: dynamic_object$67[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=2 (00000000 00000000 00000000 00000010)
+  378: dynamic_object$67[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=3 (00000000 00000000 00000000 00000011)
+  378: dynamic_object$67[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=4 (00000000 00000000 00000000 00000100)
+  378: dynamic_object$67[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=5 (00000000 00000000 00000000 00000101)
+↵
+  430: numTransactions=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:431 getUnspentTransactionsByID(&dynamic_object, 1, &numTransactions!0@3)
+  250: count=0 (00000000 00000000 00000000 00000000)
+  251: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:259 malloc(0ul)
+  43: dynamic_object$68={  } ( })
+  43: malloc_res=(const void *)&dynamic_object$68 (00010100 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  259: unspentTransactions=(UTxO **)&dynamic_object$68 (00010100 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  265: index=0 (00000000 00000000 00000000 00000000)
+  266: i=0 (00000000 00000000 00000000 00000000)
+  275: numTransactions=0 (00000000 00000000 00000000 00000000)
+↵
+  431: ptrToUtxosB=(UTxO **)&dynamic_object$68 (00010100 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  432: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:437 getUnspentTransactionsByID(&dynamic_object, 1337, &numTransactions!0@3)
+  250: count=0 (00000000 00000000 00000000 00000000)
+  251: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:259 malloc(0ul)
+  43: dynamic_object$69={  } ( })
+  43: malloc_res=(const void *)&dynamic_object$69 (00010101 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  259: unspentTransactions=(UTxO **)&dynamic_object$69 (00010101 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  265: index=0 (00000000 00000000 00000000 00000000)
+  266: i=0 (00000000 00000000 00000000 00000000)
+  275: numTransactions=0 (00000000 00000000 00000000 00000000)
+↵
+  437: ptrToUtxosContract=(UTxO **)&dynamic_object$69 (00010101 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  438: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:451 createTransferTransaction(&dynamic_object, 1, dynamic_object$66, 0, dynamic_object$67, 0)
+  114: useScriptAddress=FALSE (00000000)
+  118: i=0 (00000000 00000000 00000000 00000000)
+  129: tokenAmount=0 (00000000 00000000 00000000 00000000)
+  130: i=0 (00000000 00000000 00000000 00000000)
+  135: tokenBalance=0 (00000000 00000000 00000000 00000000)
+  136: i=0 (00000000 00000000 00000000 00000000)
+  163: i=0 (00000000 00000000 00000000 00000000)
+  168: unspentToken=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:170 createUTxO(1, 0)
+
+↳ utxo_cbmc.c:63 malloc(sizeof(UTxO) /*24ul*/ )
+  43: dynamic_object$86={ .spent=0, .ownerID=0, .isScript=FALSE, .$pad3=0,
+    .datum={ .originID=0, .amountToken1=0 }, .amount=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000, 00000000, 00000000 00000000 00000000, { 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$86.spent=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$86.ownerID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$86.isScript=FALSE (00000000)
+  43: dynamic_object$86.$pad3=0 (00000000 00000000 00000000)
+  43: dynamic_object$86.datum={ .originID=0, .amountToken1=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$86.datum.originID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$86.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$86.amount=0 (00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$86.spent (00011001 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  63: utxo=&dynamic_object$86 (00011001 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  64: dynamic_object$86.spent=0 (00000000 00000000 00000000 00000000)
+  65: dynamic_object$86.ownerID=1 (00000000 00000000 00000000 00000001)
+  66: dynamic_object$86.isScript=FALSE (00000000)
+  67: dynamic_object$86.amount=0 (00000000 00000000 00000000 00000000)
+  68: dynamic_object$86.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  69: dynamic_object$86.datum.originID=1 (00000000 00000000 00000000 00000001)
+↵
+  170: backUTxO=&dynamic_object$86 (00011001 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:174 addUTxOToLedger(&dynamic_object, &dynamic_object$86)
+
+↳ utxo_cbmc.c:56 realloc(NULL, 8ul)
+
+↳ <builtin-library-realloc>:14 malloc(8ul)
+  43: dynamic_object$87=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$87 (00011001 10000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+↵
+↵
+↵
+  413: choice_num=3 (00000000 00000000 00000000 00000011)
+
+↳ utxo_cbmc.c:414 constr_nondet_int(1, 2)
+↵
+  414: choice=2 (00000000 00000000 00000000 00000010)
+
+↳ utxo_cbmc.c:426 constr_nondet_int(1, 2)
+↵
+  426: senderId=1 (00000000 00000000 00000000 00000001)
+
+↳ utxo_cbmc.c:428 initTransaction(&transaction!0@4, 1)
+  365: transaction.numInputs=0 (00000000 00000000 00000000 00000000)
+  366: transaction.numOutputs=0 (00000000 00000000 00000000 00000000)
+  367: transaction.signerID=1 (00000000 00000000 00000000 00000001)
+
+↳ utxo_cbmc.c:370 malloc(sizeof(UTxO *) * 5ul /*40ul*/ )
+  43: dynamic_object$94={ ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL) } ({ 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$94[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$94[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$94[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$94[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$94[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)dynamic_object$94 (00011100 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  370: transaction.inputs=dynamic_object$94 (00011100 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=0 (00000000 00000000 00000000 00000000)
+  372: dynamic_object$94[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=1 (00000000 00000000 00000000 00000001)
+  372: dynamic_object$94[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=2 (00000000 00000000 00000000 00000010)
+  372: dynamic_object$94[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=3 (00000000 00000000 00000000 00000011)
+  372: dynamic_object$94[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=4 (00000000 00000000 00000000 00000100)
+  372: dynamic_object$94[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=5 (00000000 00000000 00000000 00000101)
+
+↳ utxo_cbmc.c:376 malloc(sizeof(UTxO *) * 5ul /*40ul*/ )
+  43: dynamic_object$95={ ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL) } ({ 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$95[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$95[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$95[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$95[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$95[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)dynamic_object$95 (00011100 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  376: transaction.outputs=dynamic_object$95 (00011100 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=0 (00000000 00000000 00000000 00000000)
+  378: dynamic_object$95[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=1 (00000000 00000000 00000000 00000001)
+  378: dynamic_object$95[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=2 (00000000 00000000 00000000 00000010)
+  378: dynamic_object$95[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=3 (00000000 00000000 00000000 00000011)
+  378: dynamic_object$95[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=4 (00000000 00000000 00000000 00000100)
+  378: dynamic_object$95[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=5 (00000000 00000000 00000000 00000101)
+↵
+  430: numTransactions=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:431 getUnspentTransactionsByID(&dynamic_object, 1, &numTransactions!0@4)
+  250: count=0 (00000000 00000000 00000000 00000000)
+  251: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:259 malloc(0ul)
+  43: dynamic_object$96={  } ( })
+  43: malloc_res=(const void *)&dynamic_object$96 (00011100 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  259: unspentTransactions=(UTxO **)&dynamic_object$96 (00011100 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  265: index=0 (00000000 00000000 00000000 00000000)
+  266: i=0 (00000000 00000000 00000000 00000000)
+  275: numTransactions=0 (00000000 00000000 00000000 00000000)
+↵
+  431: ptrToUtxosB=(UTxO **)&dynamic_object$96 (00011100 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  432: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:437 getUnspentTransactionsByID(&dynamic_object, 1337, &numTransactions!0@4)
+  250: count=0 (00000000 00000000 00000000 00000000)
+  251: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:259 malloc(0ul)
+  43: dynamic_object$97={  } ( })
+  43: malloc_res=(const void *)&dynamic_object$97 (00011101 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  259: unspentTransactions=(UTxO **)&dynamic_object$97 (00011101 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  265: index=0 (00000000 00000000 00000000 00000000)
+  266: i=0 (00000000 00000000 00000000 00000000)
+  275: numTransactions=0 (00000000 00000000 00000000 00000000)
+↵
+  437: ptrToUtxosContract=(UTxO **)&dynamic_object$97 (00011101 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  438: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:451 createTransferTransaction(&dynamic_object, 1, dynamic_object$94, 0, dynamic_object$95, 0)
+  114: useScriptAddress=FALSE (00000000)
+  118: i=0 (00000000 00000000 00000000 00000000)
+  129: tokenAmount=0 (00000000 00000000 00000000 00000000)
+  130: i=0 (00000000 00000000 00000000 00000000)
+  135: tokenBalance=0 (00000000 00000000 00000000 00000000)
+  136: i=0 (00000000 00000000 00000000 00000000)
+  163: i=0 (00000000 00000000 00000000 00000000)
+  168: unspentToken=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:170 createUTxO(1, 0)
+
+↳ utxo_cbmc.c:63 malloc(sizeof(UTxO) /*24ul*/ )
+  43: dynamic_object$114={ .spent=0, .ownerID=0, .isScript=FALSE, .$pad3=0,
+    .datum={ .originID=0, .amountToken1=0 }, .amount=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000, 00000000, 00000000 00000000 00000000, { 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$114.spent=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$114.ownerID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$114.isScript=FALSE (00000000)
+  43: dynamic_object$114.$pad3=0 (00000000 00000000 00000000)
+  43: dynamic_object$114.datum={ .originID=0, .amountToken1=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$114.datum.originID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$114.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$114.amount=0 (00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$114.spent (00100001 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  63: utxo=&dynamic_object$114 (00100001 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  64: dynamic_object$114.spent=0 (00000000 00000000 00000000 00000000)
+  65: dynamic_object$114.ownerID=1 (00000000 00000000 00000000 00000001)
+  66: dynamic_object$114.isScript=FALSE (00000000)
+  67: dynamic_object$114.amount=0 (00000000 00000000 00000000 00000000)
+  68: dynamic_object$114.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  69: dynamic_object$114.datum.originID=1 (00000000 00000000 00000000 00000001)
+↵
+  170: backUTxO=&dynamic_object$114 (00100001 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:174 addUTxOToLedger(&dynamic_object, &dynamic_object$114)
+
+↳ utxo_cbmc.c:56 realloc(NULL, 8ul)
+
+↳ <builtin-library-realloc>:14 malloc(8ul)
+  43: dynamic_object$115=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$115 (00100001 10000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+↵
+↵
+↵
+  413: choice_num=4 (00000000 00000000 00000000 00000100)
+
+↳ utxo_cbmc.c:414 constr_nondet_int(1, 2)
+↵
+  414: choice=2 (00000000 00000000 00000000 00000010)
+
+↳ utxo_cbmc.c:426 constr_nondet_int(1, 2)
+↵
+  426: senderId=1 (00000000 00000000 00000000 00000001)
+
+↳ utxo_cbmc.c:428 initTransaction(&transaction!0@5, 1)
+  365: transaction.numInputs=0 (00000000 00000000 00000000 00000000)
+  366: transaction.numOutputs=0 (00000000 00000000 00000000 00000000)
+  367: transaction.signerID=1 (00000000 00000000 00000000 00000001)
+
+↳ utxo_cbmc.c:370 malloc(sizeof(UTxO *) * 5ul /*40ul*/ )
+  43: dynamic_object$122={ ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL) } ({ 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$122[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$122[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$122[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$122[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$122[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)dynamic_object$122 (00100100 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  370: transaction.inputs=dynamic_object$122 (00100100 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=0 (00000000 00000000 00000000 00000000)
+  372: dynamic_object$122[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=1 (00000000 00000000 00000000 00000001)
+  372: dynamic_object$122[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=2 (00000000 00000000 00000000 00000010)
+  372: dynamic_object$122[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=3 (00000000 00000000 00000000 00000011)
+  372: dynamic_object$122[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=4 (00000000 00000000 00000000 00000100)
+  372: dynamic_object$122[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  371: i=5 (00000000 00000000 00000000 00000101)
+
+↳ utxo_cbmc.c:376 malloc(sizeof(UTxO *) * 5ul /*40ul*/ )
+  43: dynamic_object$123={ ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL), ((UTxO *)NULL) } ({ 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$123[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$123[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$123[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$123[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: dynamic_object$123[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)dynamic_object$123 (00100100 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  376: transaction.outputs=dynamic_object$123 (00100100 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=0 (00000000 00000000 00000000 00000000)
+  378: dynamic_object$123[0l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=1 (00000000 00000000 00000000 00000001)
+  378: dynamic_object$123[1l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=2 (00000000 00000000 00000000 00000010)
+  378: dynamic_object$123[2l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=3 (00000000 00000000 00000000 00000011)
+  378: dynamic_object$123[3l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=4 (00000000 00000000 00000000 00000100)
+  378: dynamic_object$123[4l]=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  377: i=5 (00000000 00000000 00000000 00000101)
+↵
+  430: numTransactions=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:431 getUnspentTransactionsByID(&dynamic_object, 1, &numTransactions!0@5)
+  250: count=0 (00000000 00000000 00000000 00000000)
+  251: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:259 malloc(0ul)
+  43: dynamic_object$124={  } ( })
+  43: malloc_res=(const void *)&dynamic_object$124 (00100100 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  259: unspentTransactions=(UTxO **)&dynamic_object$124 (00100100 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  265: index=0 (00000000 00000000 00000000 00000000)
+  266: i=0 (00000000 00000000 00000000 00000000)
+  275: numTransactions=0 (00000000 00000000 00000000 00000000)
+↵
+  431: ptrToUtxosB=(UTxO **)&dynamic_object$124 (00100100 11000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  432: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:437 getUnspentTransactionsByID(&dynamic_object, 1337, &numTransactions!0@5)
+  250: count=0 (00000000 00000000 00000000 00000000)
+  251: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:259 malloc(0ul)
+  43: dynamic_object$125={  } ( })
+  43: malloc_res=(const void *)&dynamic_object$125 (00100101 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  259: unspentTransactions=(UTxO **)&dynamic_object$125 (00100101 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  265: index=0 (00000000 00000000 00000000 00000000)
+  266: i=0 (00000000 00000000 00000000 00000000)
+  275: numTransactions=0 (00000000 00000000 00000000 00000000)
+↵
+  437: ptrToUtxosContract=(UTxO **)&dynamic_object$125 (00100101 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  438: i=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:451 createTransferTransaction(&dynamic_object, 1, dynamic_object$122, 0, dynamic_object$123, 0)
+  114: useScriptAddress=FALSE (00000000)
+  118: i=0 (00000000 00000000 00000000 00000000)
+  129: tokenAmount=0 (00000000 00000000 00000000 00000000)
+  130: i=0 (00000000 00000000 00000000 00000000)
+  135: tokenBalance=0 (00000000 00000000 00000000 00000000)
+  136: i=0 (00000000 00000000 00000000 00000000)
+  163: i=0 (00000000 00000000 00000000 00000000)
+  168: unspentToken=0 (00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:170 createUTxO(1, 0)
+
+↳ utxo_cbmc.c:63 malloc(sizeof(UTxO) /*24ul*/ )
+  43: dynamic_object$142={ .spent=0, .ownerID=0, .isScript=FALSE, .$pad3=0,
+    .datum={ .originID=0, .amountToken1=0 }, .amount=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000, 00000000, 00000000 00000000 00000000, { 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 }, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$142.spent=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$142.ownerID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$142.isScript=FALSE (00000000)
+  43: dynamic_object$142.$pad3=0 (00000000 00000000 00000000)
+  43: dynamic_object$142.datum={ .originID=0, .amountToken1=0 } ({ 00000000 00000000 00000000 00000000, 00000000 00000000 00000000 00000000 })
+  43: dynamic_object$142.datum.originID=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$142.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  43: dynamic_object$142.amount=0 (00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$142.spent (00101001 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+  63: utxo=&dynamic_object$142 (00101001 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  64: dynamic_object$142.spent=0 (00000000 00000000 00000000 00000000)
+  65: dynamic_object$142.ownerID=1 (00000000 00000000 00000000 00000001)
+  66: dynamic_object$142.isScript=FALSE (00000000)
+  67: dynamic_object$142.amount=0 (00000000 00000000 00000000 00000000)
+  68: dynamic_object$142.datum.amountToken1=0 (00000000 00000000 00000000 00000000)
+  69: dynamic_object$142.datum.originID=1 (00000000 00000000 00000000 00000001)
+↵
+  170: backUTxO=&dynamic_object$142 (00101001 01000000 00000000 00000000 00000000 00000000 00000000 00000000)
+
+↳ utxo_cbmc.c:174 addUTxOToLedger(&dynamic_object, &dynamic_object$142)
+
+↳ utxo_cbmc.c:56 realloc(NULL, 8ul)
+
+↳ <builtin-library-realloc>:14 malloc(8ul)
+  43: dynamic_object$143=((UTxO *)NULL) (00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  43: malloc_res=(const void *)&dynamic_object$143 (00101001 10000000 00000000 00000000 00000000 00000000 00000000 00000000)
+  46: record_malloc=FALSE (0)
+  47: __CPROVER_malloc_is_new_array=FALSE (0)
+↵
+↵
+↵
+↵
+  413: choice_num=5 (00000000 00000000 00000000 00000101)
+
+↳ utxo_cbmc.c:456 calculateOwnerTokens(&dynamic_object, 1)
+  383: totalTokens=0 (00000000 00000000 00000000 00000000)
+  385: i=0 (00000000 00000000 00000000 00000000)
+↵
+
+Violated property:
+  file utxo_cbmc.c function main line 456 thread 0
+  Cannot steal
+  tmp_if_expr
+
+
+
+** 1 of 28 failed (2 iterations)
+VERIFICATION FAILED
