@@ -11,8 +11,8 @@
 #include "../include/deposit.h"
 #include "../include/close.h"
 
-// #include "../include/cbmc_helper.h"
-#include "../include/mock_cbmc_helper.h"
+#include "../include/cbmc_helper.h"
+//#include "../include/mock_cbmc_helper.h"
 
 int main() {
     // Define the tokens for internal accounts
@@ -177,15 +177,11 @@ int main() {
     // Those are various properties
     // Mainly to debug modeling
     int reach = 1;
-    assert(reach == 1);
-    // __CPROVER_assert(reach == 0, "Are the properties dead-code -- needs to fail");
-    // __CPROVER_assert(success == 0, "Impossible to get a successful contract");
-    // __CPROVER_assert(success == 1, "Impossible to get a failing contract");
-    assert(success ==1);
-    // __CPROVER_assert(initialTotalAda == finalTotalAda, "Ada are preserved!");
-    assert(initialTotalAda == finalTotalAda);
-    // __CPROVER_assert(initialTotalDollar == finalTotalDollar, "Dollar are preserved!");
-    assert(initialTotalDollar == finalTotalDollar);
+    __CPROVER_assert(reach == 0, "Are the properties dead-code -- needs to fail");
+    __CPROVER_assert(success == 0, "Impossible to get a successful contract");
+    __CPROVER_assert(success == 1, "Impossible to get a failing contract");
+    __CPROVER_assert(initialTotalAda == finalTotalAda, "Ada are preserved!");
+    __CPROVER_assert(initialTotalDollar == finalTotalDollar, "Dollar are preserved!");
     // Free allocated memory
     free(failedContract);
     free(successContract);

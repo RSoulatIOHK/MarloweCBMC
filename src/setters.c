@@ -5,7 +5,7 @@
 #include "../include/types.h"
 
 
-Token newTokenHolding(CurrencyType currency, int amount) {
+Token* newTokenHolding(CurrencyType currency, int amount) {
     Token* token = malloc(sizeof(Token));
     token->currency = currency;
     token->amount = amount;
