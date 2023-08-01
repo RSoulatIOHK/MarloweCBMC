@@ -14,7 +14,38 @@
 #include "../include/cbmc_helper.h"
 //#include "../include/mock_cbmc_helper.h"
 
-int main() {
+
+int main(){
+    // Let's do a simple pay (so that we can check if we have working UTxO from the outside)
+    // followed by a close (so that we can check if we have working UTxO from the inside)
+
+    Contract* successContract = newContract(CLOSE, (ContractParameters){
+    .closeParams = {
+        .id = 0
+        }
+    }, NULL, NULL);
+
+    Contract* failedContract = newContract(CLOSE, (ContractParameters){
+        .closeParams = {
+            .id = 1
+            }
+        }, NULL, NULL);
+    
+    Contract* whenDepositDollarProvider = newContract(DEPOSIT, (ContractParameters){
+        .depositParams = {
+            .depositor = dollarProvider,
+            .receiver = dollarProvider,
+            .amount = 100,
+            .currency = DOLLAR,
+            .timeout = 12
+            }
+        }, successContract, failedContract);
+
+    InternalWallet* internalWallet = newInternalWallet(accounts, 1);
+
+}
+
+int full_main() {
     // Define the tokens for internal accounts
     Token ada1 = {.currency = ADA, .amount = 0};
     Token dollar1 = {.currency = DOLLAR, .amount = 0};
@@ -91,7 +122,7 @@ int main() {
             }
         }, payDollarProvider, failedContract);
 
-    Contract* whenDepositAdaProvider = newContract(DEPOSIT, (ContractParameters){
+    Contract* whenDepositAdaProvider = newCgit ontract(DEPOSIT, (ContractParameters){
         .depositParams = {
             .depositor = adaProvider,
             .receiver = adaProvider,

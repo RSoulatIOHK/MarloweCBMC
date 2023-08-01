@@ -5,6 +5,36 @@
 #include "../include/types.h"
 #include "../include/getters.h"
 
+void printLedgerState(Ledger* ledger) {
+    printf("=== Ledger State ===\n");
+
+    for (int i = 0; i < ledger->numUnspentTransactions; i++) {
+        UTxO* utxo = ledger->unspentTransactions[i];
+
+        printf("UTxO ID: %d\n", i);
+        printf("Spent: %s\n", utxo->spent ? "Yes" : "No");
+        printf("Owner ID: %d\n", utxo->ownerID);
+        printf("Token:\n");
+        for (int i = 0; i <= NUMTOKENS; i++){
+            printf(" - Token Amount: %d", utxo->tokens[i]->amount);
+            switch (utxo->tokens[i]->currency){
+            case ADA:
+                printf("ADA\n");
+                break;
+            case DOLLAR:
+                printf("DOLLARS\n");
+                break;
+            case OTHER_CURRENCY:
+                printf("UNKNOWN\n");
+                break;
+            }
+        }
+        printf("\n");
+    }
+
+    printf("===================\n");
+}
+
 void prettyPrintPayContract(const PayParameters* payParams) {
     printf("%s has PAID %s from its internal account to their outside wallet the amount of %d %s\n",
        payParams->payer->name, payParams->receiver->name,

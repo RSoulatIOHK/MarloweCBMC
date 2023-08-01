@@ -1,3 +1,5 @@
+#include "../include/constants.h"
+
 typedef enum {
     ADAPROVIDER,
     DOLLARPROVIDER,
@@ -16,9 +18,30 @@ typedef struct Token {
     int amount;
 } Token;
 
+typedef struct {
+    int spent;
+    int ownerID;
+    Token* tokens[NUMTOKENS];
+} UTxO;
+
+typedef struct {
+    UTxO* inputs[MAX_INPUTS];
+    int numInputs;
+    UTxO* outputs[MAX_OUTPUTS];
+    int numOutputs;
+    int signerID;
+} Transaction;
+
+// Structure to represent the ledger
+typedef struct {
+    UTxO* unspentTransactions[MAX_UTXOS];
+    int numUnspentTransactions;
+} Ledger;
+
 typedef struct Wallet {
     Token* tokens;
     int numTokens;
+    int ownerID;
 } Wallet;
 
 typedef struct Party {
@@ -37,13 +60,6 @@ typedef struct InternalWallet {
     InternalAccount* accounts;
     int numAccounts;
 } InternalWallet;
-
-typedef struct Transaction {
-    Party* source;
-    Party* destination;
-    int amount;
-    CurrencyType currency;
-} Transaction;
 
 typedef struct PayParameters {
     Party* payer;

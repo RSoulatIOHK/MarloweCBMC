@@ -4,6 +4,19 @@
 #include "../include/constants.h"
 #include "../include/types.h"
 
+UTxO* createUTxO(int ownerID, Token** tokens, int numTokens) {
+    UTxO* utxo = malloc(sizeof(UTxO));
+    utxo->spent = 0;  // UTxO is initially unspent
+    utxo->ownerID = ownerID;
+    for (int i = 0; i < NUMTOKENS; i++){
+        utxo->tokens[i] = 0;
+    }
+    for (int i = 0; i < numTokens; i ++){
+        utxo->tokens[tokens[i]->currency] = tokens[i]->amount; 
+    }
+    return utxo;
+}
+
 
 Token* newTokenHolding(CurrencyType currency, int amount) {
     Token* token = malloc(sizeof(Token));
@@ -18,6 +31,12 @@ Wallet* newWallet(Token tokens[], int numTokens) {
     wallet->tokens = malloc(sizeof(Token) * numTokens);
     memcpy(wallet->tokens, tokens, sizeof(Token) * numTokens);
     wallet->numTokens = numTokens;
+    wallet->ownerID = -1; // No owner yet at creation
+    return wallet;
+}
+
+Wallet* walletAttribution(Wallet* wallet, int ownerId){
+    wallet->ownerID = ownerId;
     return wallet;
 }
 

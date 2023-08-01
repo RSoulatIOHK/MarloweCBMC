@@ -1,3 +1,4 @@
+UTxO* createUTxO(int ownerID, Token* tokens, int numTokens);
 Token* newTokenHolding(CurrencyType currency, int amount);
 Wallet* newWallet(Token tokens[], int numTokens);
 Party* newParty(const char* name, int id, Wallet* wallet);
