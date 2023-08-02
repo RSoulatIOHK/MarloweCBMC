@@ -14,6 +14,7 @@
 #include "../include/cbmc_helper.h"
 //#include "../include/mock_cbmc_helper.h"
 
+
 int main() {
     // Define the tokens for internal accounts
     Token ada1 = {.currency = ADA, .amount = 0};
@@ -37,9 +38,9 @@ int main() {
     InternalWallet* internalWallet = newInternalWallet(accounts, 2);
 
     // Define the tokens for external wallets
-    Token ada3 = {.currency = ADA, .amount = constr_non_det_int(0,50)};
-    Token dollar3 = {.currency = DOLLAR, .amount = constr_non_det_int(0,50)};
-    Token ada4 = {.currency = ADA, .amount = constr_non_det_int(0,50)};
+    Token ada3 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
+    Token dollar3 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
+    Token ada4 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
     Token dollar4 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
     
     // Define the wallets for external wallets
