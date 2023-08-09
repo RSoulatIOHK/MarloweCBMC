@@ -184,6 +184,7 @@ int main() {
     __CPROVER_assert(initialTotalAda == finalTotalAda, "Ada are preserved!");
     __CPROVER_assert(initialTotalDollar == finalTotalDollar, "Dollar are preserved!");
     __CPROVER_assert(success != -1, "Always finish on a Close contract");
+    __CPROVER_assert(res_ret == 0, "Always works well");
     // Free allocated memory
     free(failedContract);
     free(successContract);
