@@ -11,6 +11,7 @@
 // Structure to represent a token
 typedef struct {
     int amount;
+    UTxO* utxo; // Add a reference to the UTxO that the token belongs to
 } Token;
 
 typedef struct {
@@ -44,9 +45,10 @@ typedef struct {
 } Ledger;
 
 // Function to create a new token
-Token* createToken(int amount) {
+Token* createToken(int amount, UTxO* utxo) {
     Token* token = malloc(sizeof(Token));
     token->amount = amount;
+    token->utxo = utxo; // Set the UTxO that the token belongs to
     return token;
 }
 
@@ -72,6 +74,12 @@ UTxO* createUTxO(int ownerID, Token** tokens, int numTokens) {
     utxo->isScript = false;
     utxo->datum.amountToken1 = 0;
     utxo->datum.amountToken2 = 0;
+
+    // Update the tokens to reference the UTxO
+    for (int i = 0; i < numTokens; i++) {
+        tokens[i]->utxo = utxo;
+    }
+
     return utxo;
 }
 
