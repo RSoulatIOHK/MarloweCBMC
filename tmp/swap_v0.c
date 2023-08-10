@@ -474,6 +474,16 @@ int main() {
     
 
 
+    // Check that all internal accounts have a balance of 0
+    for (int i = 0; i < state->internalWallet.numAccounts; i++) {
+        InternalAccount* account = &(state->internalWallet.accounts[i]);
+        for (int j = 0; j < account->wallet.numTokens; j++) {
+            if (account->wallet.tokens[j].amount != 0) {
+                __CPROVER_assert(0, "Internal account balance is not 0");
+            }
+        }
+    }
+
     // Those are various properties
     // Mainly to debug modeling
     __CPROVER_assert(success == 0, "Impossible to get a succesful contract");
