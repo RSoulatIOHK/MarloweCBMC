@@ -17,10 +17,10 @@
 
 int main() {
     // Define the tokens for internal accounts
-    Token ada1 = {.currency = ADA, .amount = 0};
-    Token dollar1 = {.currency = DOLLAR, .amount = 0};
-    Token ada2 = {.currency = ADA, .amount = 0};
-    Token dollar2 = {.currency = DOLLAR, .amount = 0};
+    Token ada1 = {.currency = ADA, .amount = constr_non_det_int(0,10)};
+    Token dollar1 = {.currency = DOLLAR, .amount = constr_non_det_int(0,10};
+    Token ada2 = {.currency = ADA, .amount = constr_non_det_int(0,10};
+    Token dollar2 = {.currency = DOLLAR, .amount = constr_non_det_int(0,10};
 
     // Define the wallets for internal accounts
     Token tokens1[] = {ada1, dollar1};
