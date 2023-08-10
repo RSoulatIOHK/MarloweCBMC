@@ -1,5 +1,8 @@
-/tmp/
-/report/
-/.vscode/
-*.goto
+./tmp/
+./report/
+./.vscode/
+./src/*.goto
+./src/*.o
+./build/*.goto
 *.o
+*.goto
