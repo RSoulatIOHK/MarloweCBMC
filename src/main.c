@@ -111,7 +111,7 @@ int main() {
     int currentTime = 0;
     int contractTimeout = 20;
 
-    int success = 0;
+    int success = -1;
 
     // THIS IS THE MAIN LOOP OF THE EXECUTION
     // PROBABLY NEED TO BE FACTORED OUT
@@ -183,6 +183,8 @@ int main() {
     __CPROVER_assert(success == 1, "Impossible to get a failing contract");
     __CPROVER_assert(initialTotalAda == finalTotalAda, "Ada are preserved!");
     __CPROVER_assert(initialTotalDollar == finalTotalDollar, "Dollar are preserved!");
+    __CPROVER_assert(success != -1, "Always finish on a Close contract");
+    __CPROVER_assert(res_ret == 0, "Always works well");
     // Free allocated memory
     free(failedContract);
     free(successContract);
