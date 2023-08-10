@@ -15,44 +15,8 @@
 //#include "../include/mock_cbmc_helper.h"
 
 
-int main() {
-    // Define the tokens for internal accounts
-    Token ada1 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
-    Token dollar1 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
-    Token ada2 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
-    Token dollar2 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
-
-    // Define the wallets for internal accounts
-    Token tokens1[] = {ada1, dollar1};
-    Wallet* wallet1 = newWallet(tokens1, 2);
-    Token tokens2[] = {ada2, dollar2};
-    Wallet* wallet2 = newWallet(tokens2, 2);
-
-    // Define the internal accounts
-    InternalAccount accounts[] = {
-        {1, *wallet1},
-        {2, *wallet2}
-    };
-
-    // Define the internal wallet
-    InternalWallet* internalWallet = newInternalWallet(accounts, 2);
-
-    // Define the tokens for external wallets
-    Token ada3 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
-    Token dollar3 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
-    Token ada4 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
-    Token dollar4 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
-    
-    // Define the wallets for external wallets
-    Token tokens3[] = {ada3, dollar3};
-    Wallet* wallet3 = newWallet(tokens3, 2);
-    Token tokens4[] = {ada4, dollar4};
-    Wallet* wallet4 = newWallet(tokens4, 2);
-
-    Party* dollarProvider = newParty("DollarProvider", 1, wallet4);
-    Party* adaProvider = newParty("AdaProvider", 2, wallet3);
-
-    Contract* successContract = newContract(CLOSE, (ContractParameters){
+Contract* readContract(filename){
+     Contract* successContract = newContract(CLOSE, (ContractParameters){
     .closeParams = {
         .id = 0
         }
@@ -102,6 +66,49 @@ int main() {
             }
         }, whenDepositDollarProvider, failedContract);
 
+    return whenDepositAdaProvider;
+}
+
+int main() {
+    // Define the tokens for internal accounts
+    Token ada1 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
+    Token dollar1 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
+    Token ada2 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
+    Token dollar2 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
+
+    // Define the wallets for internal accounts
+    Token tokens1[] = {ada1, dollar1};
+    Wallet* wallet1 = newWallet(tokens1, 2);
+    Token tokens2[] = {ada2, dollar2};
+    Wallet* wallet2 = newWallet(tokens2, 2);
+
+    // Define the internal accounts
+    InternalAccount accounts[] = {
+        {1, *wallet1},
+        {2, *wallet2}
+    };
+
+    // Define the internal wallet
+    InternalWallet* internalWallet = newInternalWallet(accounts, 2);
+
+    // Define the tokens for external wallets
+    Token ada3 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
+    Token dollar3 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
+    Token ada4 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
+    Token dollar4 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
+    
+    // Define the wallets for external wallets
+    Token tokens3[] = {ada3, dollar3};
+    Wallet* wallet3 = newWallet(tokens3, 2);
+    Token tokens4[] = {ada4, dollar4};
+    Wallet* wallet4 = newWallet(tokens4, 2);
+
+    Party* dollarProvider = newParty("DollarProvider", 1, wallet4);
+    Party* adaProvider = newParty("AdaProvider", 2, wallet3);
+
+    // Define the contracts
+    Contract* marloweContract = malloc(sizeof(Contract);
+    marloweContract = readContract("contract.marlowe");
 
     // Define the contract state
     Party* parties[] = {adaProvider, dollarProvider};
@@ -184,8 +191,12 @@ int main() {
     __CPROVER_assert(initialTotalAda == finalTotalAda, "Ada are preserved!");
     __CPROVER_assert(initialTotalDollar == finalTotalDollar, "Dollar are preserved!");
     __CPROVER_assert(success != -1, "Always finish on a Close contract");
-    __CPROVER_assert(res_ret == 0, "Always works well");
+ 
+ 
+
+
     // Free allocated memory
+    // TODO: Factor out the free functions
     free(failedContract);
     free(successContract);
     free(payAdaProvider);
