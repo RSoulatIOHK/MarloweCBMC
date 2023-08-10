@@ -12,6 +12,7 @@
 #include "../include/close.h"
 
 #include "../include/cbmc_helper.h"
+#include "../include/constr_non_det_int.h" // Include the file where `constr_non_det_int` is defined
 //#include "../include/mock_cbmc_helper.h"
 
 
