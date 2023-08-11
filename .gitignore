@@ -3,6 +3,8 @@
 ./.vscode/
 ./src/*.goto
 ./src/*.o
-./build/*.goto
+./build/
+./report/
+./utxomodel/
 *.o
 *.goto
