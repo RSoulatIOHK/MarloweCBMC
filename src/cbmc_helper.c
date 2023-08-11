@@ -3,3 +3,7 @@ int constr_non_det_int(int min, int max){
 	__CPROVER_assume(min <= res_ret && res_ret <= max);
 	return res_ret;
 }
+
+void generateHTMLReport(){
+	// TODO: Add logic to include the list of successful verifications in the HTML report
+}
