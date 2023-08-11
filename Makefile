@@ -11,6 +11,7 @@ CBMC_OPT := --object-bits 10
 # Output binary and build directory
 BUILDDIR := build
 OUTPUT := $(BUILDDIR)/marloweSwapMC
+REPORTDIR := report
 
 # Default target
 all: $(OUTPUT)
@@ -25,13 +26,19 @@ $(SRCDIR)/%.o: $(SRCDIR)/%.c
 
 # Ensure the build directory exists before compiling
 $(shell mkdir -p $(BUILDDIR))
+$(shell mkdir -p $(REPORTDIR))
 
 # Clean the generated files
 clean:
-	rm -rf $(OBJECTS) $(BUILDDIR)
+	rm -rf $(OBJECTS) $(BUILDDIR) $(REPORTDIR)
 
 .PHONY: all clean
 
 # CBMC Analysis target
 verify:
-	cbmc -I$(INCDIR) $(SOURCES) $(SRCDIR)/main.c $(CBMC_OPT) -DCBMC
+	goto-cc -o $(BUILDDIR)/main.goto $(SRCDIR)/*.c -I$(INCDIR)
+	-cbmc $(BUILDDIR)/main.goto $(CBMC_OPT) --trace --xml-ui > $(REPORTDIR)/result.xml
+	cbmc $(BUILDDIR)/main.goto $(CBMC_OPT) --cover location -xml-ui > $(REPORTDIR)/coverage.xml
+	cbmc $(BUILDDIR)/main.goto $(CBMC_OPT) --show-properties --xml-ui > $(REPORTDIR)/properties.xml
+	cbmc-viewer --goto $(BUILDDIR)/main.goto --result $(REPORTDIR)/result.xml --coverage $(REPORTDIR)/coverage.xml --property $(REPORTDIR)/properties.xml --srcdir $(SRCDIR) 
+	open $(REPORTDIR)/html/index.html

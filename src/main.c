@@ -12,11 +12,46 @@
 #include "../include/close.h"
 
 #include "../include/cbmc_helper.h"
-//#include "../include/mock_cbmc_helper.h"
+// #include "../include/mock_cbmc_helper.h"
 
+int main() {
+    // Define the tokens for internal accounts
+    Token ada1 = {.currency = ADA, .amount = constr_non_det_int(0,0)};
+    Token dollar1 = {.currency = DOLLAR, .amount = constr_non_det_int(0,0)};
+    Token ada2 = {.currency = ADA, .amount = constr_non_det_int(0,0)};
+    Token dollar2 = {.currency = DOLLAR, .amount = constr_non_det_int(0,0)};
 
-Contract* readContract(filename){
-     Contract* successContract = newContract(CLOSE, (ContractParameters){
+    // Define the wallets for internal accounts
+    Token tokens1[] = {ada1, dollar1};
+    Wallet* wallet1 = newWallet(tokens1, 2);
+    Token tokens2[] = {ada2, dollar2};
+    Wallet* wallet2 = newWallet(tokens2, 2);
+
+    // Define the internal accounts
+    InternalAccount accounts[] = {
+        {1, *wallet1},
+        {2, *wallet2}
+    };
+
+    // Define the internal wallet
+    InternalWallet* internalWallet = newInternalWallet(accounts, 2);
+
+    // Define the tokens for external wallets
+    Token ada3 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
+    Token dollar3 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
+    Token ada4 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
+    Token dollar4 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
+    
+    // Define the wallets for external wallets
+    Token tokens3[] = {ada3, dollar3};
+    Wallet* wallet3 = newWallet(tokens3, 2);
+    Token tokens4[] = {ada4, dollar4};
+    Wallet* wallet4 = newWallet(tokens4, 2);
+
+    Party* dollarProvider = newParty(DOLLARPROVIDER, 1, wallet4);
+    Party* adaProvider = newParty(ADAPROVIDER, 2, wallet3);
+
+    Contract* successContract = newContract(CLOSE, (ContractParameters){
     .closeParams = {
         .id = 0
         }
@@ -66,50 +101,6 @@ Contract* readContract(filename){
             }
         }, whenDepositDollarProvider, failedContract);
 
-    return whenDepositAdaProvider;
-}
-
-int main() {
-    // Define the tokens for internal accounts
-    Token ada1 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
-    Token dollar1 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
-    Token ada2 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
-    Token dollar2 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
-
-    // Define the wallets for internal accounts
-    Token tokens1[] = {ada1, dollar1};
-    Wallet* wallet1 = newWallet(tokens1, 2);
-    Token tokens2[] = {ada2, dollar2};
-    Wallet* wallet2 = newWallet(tokens2, 2);
-
-    // Define the internal accounts
-    InternalAccount accounts[] = {
-        {1, *wallet1},
-        {2, *wallet2}
-    };
-
-    // Define the internal wallet
-    InternalWallet* internalWallet = newInternalWallet(accounts, 2);
-
-    // Define the tokens for external wallets
-    Token ada3 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
-    Token dollar3 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
-    Token ada4 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
-    Token dollar4 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
-    
-    // Define the wallets for external wallets
-    Token tokens3[] = {ada3, dollar3};
-    Wallet* wallet3 = newWallet(tokens3, 2);
-    Token tokens4[] = {ada4, dollar4};
-    Wallet* wallet4 = newWallet(tokens4, 2);
-
-    Party* dollarProvider = newParty("DollarProvider", 1, wallet4);
-    Party* adaProvider = newParty("AdaProvider", 2, wallet3);
-
-    // Define the contracts
-    Contract* marloweContract = malloc(sizeof(Contract);
-    marloweContract = readContract("contract.marlowe");
-
     // Define the contract state
     Party* parties[] = {adaProvider, dollarProvider};
     ContractState* state = newContractState(whenDepositAdaProvider, internalWallet, parties, 2);
@@ -128,7 +119,7 @@ int main() {
     int initialTotalDollar = getTotalDollars(state);
 
     while (currentTime < contractTimeout && res_ret == 0) {
-        //prettyPrintWholeContractState(state, currentTime);
+        // prettyPrintWholeContractState(state, currentTime);
         currentTime++;
 
         if (state->currentContract == NULL) {
@@ -141,7 +132,6 @@ int main() {
                 Transaction transaction = convertToTransaction(&(state->currentContract->params.payParams));
                 int res = makePayment(state, &transaction);
                 if (res == 0) {
-                    //state->currentContract = state->currentContract->continueAs;
                 } else {
                     fprintf(stderr, "PAY action was not successful\n");
                     res_ret = 1;
@@ -186,13 +176,12 @@ int main() {
     // Mainly to debug modeling
     int reach = 1;
     __CPROVER_assert(reach == 0, "Are the properties dead-code -- needs to fail");
+    
     __CPROVER_assert(success == 0, "Impossible to get a successful contract");
     __CPROVER_assert(success == 1, "Impossible to get a failing contract");
     __CPROVER_assert(initialTotalAda == finalTotalAda, "Ada are preserved!");
     __CPROVER_assert(initialTotalDollar == finalTotalDollar, "Dollar are preserved!");
     __CPROVER_assert(success != -1, "Always finish on a Close contract");
- 
- 
 
 
     // Free allocated memory
