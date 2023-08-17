@@ -183,6 +183,11 @@ int main() {
     __CPROVER_assert(initialTotalDollar == finalTotalDollar, "Dollar are preserved!");
     __CPROVER_assert(success != -1, "Always finish on a Close contract");
 
+    // Additional properties
+    __CPROVER_assert(reach == 1, "Are the properties reachable -- needs to pass");
+    __CPROVER_assert(success == 0 || success == 1, "Contract can only be successful or failing");
+    __CPROVER_assert(initialTotalAda >= finalTotalAda, "Ada cannot increase");
+    __CPROVER_assert(initialTotalDollar >= finalTotalDollar, "Dollar cannot increase");
 
     // Free allocated memory
     // TODO: Factor out the free functions
