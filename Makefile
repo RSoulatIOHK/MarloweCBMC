@@ -2,6 +2,7 @@ CC := gcc
 CFLAGS := -Wall -Wextra -Iinclude
 
 # Source and object files
+DOG := " _   _\n/(. .)\    )\n  (*)____/|\n  /       |\n /   |--\ |\n(_)(_)  (_)"
 SRCDIR := src
 INCDIR := include
 SOURCES := $(wildcard $(SRCDIR)/*.c)
@@ -36,6 +37,7 @@ clean:
 
 # CBMC Analysis target
 verify:
+	echo $(DOG) # Contribution by Aliénor S.
 	goto-cc -o $(BUILDDIR)/main.goto $(SRCDIR)/*.c -I$(INCDIR)
 	-cbmc $(BUILDDIR)/main.goto $(CBMC_OPT) --trace --xml-ui > $(REPORTDIR)/result.xml
 	cbmc $(BUILDDIR)/main.goto $(CBMC_OPT) --cover location -xml-ui > $(REPORTDIR)/coverage.xml

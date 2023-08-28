@@ -57,7 +57,7 @@ int main() {
     Wallet* walletDollarProviderExternal = newWallet(tokensDollarProviderExternal, 2);
 
     Party* dollarProvider = newParty(DOLLARPROVIDER, 1, walletDollarProviderExternal);
-    Party* adaProvider = newParty(ADAPROVIDER, 2, walletDollarProviderExternal);
+    Party* adaProvider = newParty(ADAPROVIDER, 2, walletAdaProviderExternal);
 
 
     // Define the contract
