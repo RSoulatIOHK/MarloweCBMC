@@ -14,90 +14,115 @@
 #include "../include/cbmc_helper.h"
 // #include "../include/mock_cbmc_helper.h"
 
+// Type for the contract template
+typedef struct {
+    int amountAda;
+    int amountDollar;
+    int adaTimeout;
+    int dollarTimeout;
+} ContractTemplate;
+
 int main() {
     // Define the tokens for internal accounts
-    Token ada1 = {.currency = ADA, .amount = constr_non_det_int(0,0)};
-    Token dollar1 = {.currency = DOLLAR, .amount = constr_non_det_int(0,0)};
-    Token ada2 = {.currency = ADA, .amount = constr_non_det_int(0,0)};
-    Token dollar2 = {.currency = DOLLAR, .amount = constr_non_det_int(0,0)};
+    Token adaAdaProviderInternal = {.currency = ADA, .amount = constr_non_det_int(0,0)};
+    Token dollarAdaProviderInternal = {.currency = DOLLAR, .amount = constr_non_det_int(0,0)};
+    Token adaDollarProviderInternal = {.currency = ADA, .amount = constr_non_det_int(0,0)};
+    Token dollarDollarProviderInternal = {.currency = DOLLAR, .amount = constr_non_det_int(0,0)};
 
     // Define the wallets for internal accounts
-    Token tokens1[] = {ada1, dollar1};
-    Wallet* wallet1 = newWallet(tokens1, 2);
-    Token tokens2[] = {ada2, dollar2};
-    Wallet* wallet2 = newWallet(tokens2, 2);
+    Token tokensAdaProviderInternal[] = {adaAdaProviderInternal, dollarAdaProviderInternal};
+    Wallet* walletAdaProviderInternal = newWallet(tokensAdaProviderInternal, 2);
+    Token tokensDollarProviderInternal[] = {adaDollarProviderInternal, dollarDollarProviderInternal};
+    Wallet* walletDollarProviderInternal = newWallet(tokensDollarProviderInternal, 2);
 
     // Define the internal accounts
     InternalAccount accounts[] = {
-        {1, *wallet1},
-        {2, *wallet2}
+        {1, *walletAdaProviderInternal},
+        {2, *walletDollarProviderInternal}
     };
 
     // Define the internal wallet
     InternalWallet* internalWallet = newInternalWallet(accounts, 2);
 
     // Define the tokens for external wallets
-    Token ada3 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
-    Token dollar3 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
-    Token ada4 = {.currency = ADA, .amount = constr_non_det_int(0,100)};
-    Token dollar4 = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
+    Token adaAdaProviderExternal = {.currency = ADA, .amount = constr_non_det_int(0,100)};
+    Token dollarAdaProviderExternal = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
+    Token adaDollarProviderExternal = {.currency = ADA, .amount = constr_non_det_int(0,100)};
+    Token dollarDollarProviderExternal = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
     
     // Define the wallets for external wallets
-    Token tokens3[] = {ada3, dollar3};
-    Wallet* wallet3 = newWallet(tokens3, 2);
-    Token tokens4[] = {ada4, dollar4};
-    Wallet* wallet4 = newWallet(tokens4, 2);
+    Token tokensAdaProviderExternal[] = {adaDollarProviderExternal, dollarAdaProviderExternal};
+    Wallet* walletAdaProviderExternal = newWallet(tokensAdaProviderExternal, 2);
+    Token tokensDollarProviderExternal[] = {adaDollarProviderExternal, dollarDollarProviderExternal};
+    Wallet* walletDollarProviderExternal = newWallet(tokensDollarProviderExternal, 2);
 
-    Party* dollarProvider = newParty(DOLLARPROVIDER, 1, wallet4);
-    Party* adaProvider = newParty(ADAPROVIDER, 2, wallet3);
+    Party* dollarProvider = newParty(DOLLARPROVIDER, 1, walletDollarProviderExternal);
+    Party* adaProvider = newParty(ADAPROVIDER, 2, walletAdaProviderExternal);
 
+
+    // Define the contract
+
+    // Define the contract template
+    ContractTemplate template = {
+        .amountAda = constr_non_det_int(0,100),
+        .amountDollar = constr_non_det_int(0,100),
+        .adaTimeout = constr_non_det_int(0,10),
+        .dollarTimeout = constr_non_det_int(0,10)
+    };
+
+    // Define successContract as the close contract when the swap is successful
     Contract* successContract = newContract(CLOSE, (ContractParameters){
     .closeParams = {
         .id = 0
         }
     }, NULL, NULL);
 
+    // Define failedContract as the close contract when the swap is not successful
     Contract* failedContract = newContract(CLOSE, (ContractParameters){
         .closeParams = {
             .id = 1
             }
         }, NULL, NULL);
 
+    // Define payAdaProvider as the part of the contract that pays the adaProvider when the swap is successful
     Contract* payAdaProvider = newContract(PAY, (ContractParameters){
         .payParams = {
             .payer = dollarProvider,
             .receiver = adaProvider,
-            .amount = 100,
+            .amount = template.amountDollar,
             .currency = DOLLAR
             }
         }, NULL, successContract);
 
+    // Define payDollarProvider as the part of the contract that pays the dollarProvider when the swap is successful
     Contract* payDollarProvider = newContract(PAY, (ContractParameters){
         .payParams = {
             .payer = adaProvider,
             .receiver = dollarProvider,
-            .amount = 50,
+            .amount = template.amountAda,
             .currency = ADA
             }
         }, NULL, payAdaProvider);
 
+    // Define whenDepositDollarProvider as the part of the contract that awaits a deposit by the dollarProvider
     Contract* whenDepositDollarProvider = newContract(DEPOSIT, (ContractParameters){
         .depositParams = {
             .depositor = dollarProvider,
             .receiver = dollarProvider,
-            .amount = 100,
+            .amount = template.amountDollar,
             .currency = DOLLAR,
-            .timeout = 12
+            .timeout = template.dollarTimeout
             }
         }, payDollarProvider, failedContract);
 
+    // Define whenDepositAdaProvider as the part of the contract that awaits a deposit by the adaProvider
     Contract* whenDepositAdaProvider = newContract(DEPOSIT, (ContractParameters){
         .depositParams = {
             .depositor = adaProvider,
             .receiver = adaProvider,
-            .amount = 50,
+            .amount = template.amountAda,
             .currency = ADA,
-            .timeout = 10
+            .timeout = template.adaTimeout
             }
         }, whenDepositDollarProvider, failedContract);
 
@@ -113,8 +138,13 @@ int main() {
 
     // THIS IS THE MAIN LOOP OF THE EXECUTION
     // PROBABLY NEED TO BE FACTORED OUT
+    
+    // Return value of the simulation
+    // 0 means unfinished
+    // 1 means finished with or without success
     int res_ret = 0;
 
+    // Get the initial ammounts of ada and dollars
     int initialTotalAda = getTotalAda(state);
     int initialTotalDollar = getTotalDollars(state);
 
@@ -152,6 +182,8 @@ int main() {
                     state->currentContract = state->currentContract->continueAs;
                 }
                 else {
+                    // For the moment, we force the party to try to deposit whatever is asked
+                    // TODO: Leave the choice to the simulation to do it or not
                     Transaction depositTransaction = {
                         .source = state->currentContract->params.depositParams.depositor,
                         .destination = state->currentContract->params.depositParams.receiver,
@@ -159,6 +191,8 @@ int main() {
                         .currency = state->currentContract->params.depositParams.currency
                     };
                     int res = makeDeposit(state, &depositTransaction, &(state->currentContract->params.depositParams));
+                    // Handle errors
+                    // Most of the error handling has been moved to the makeDeposit function
                     if (res == 0){}else{}
                 }
                 break;
@@ -182,8 +216,9 @@ int main() {
     __CPROVER_assert(initialTotalAda == finalTotalAda, "Ada are preserved!");
     __CPROVER_assert(initialTotalDollar == finalTotalDollar, "Dollar are preserved!");
     __CPROVER_assert(success != -1, "Always finish on a Close contract");
-
-
+    // Check that the internal accounts are all empty
+    __CPROVER_assert(adaAdaProviderInternal.amount == 0 && adaDollarProviderInternal.amount == 0, "No ada left in the contract");
+    __CPROVER_assert(dollarAdaProviderInternal.amount == 0 && dollarDollarProviderInternal.amount == 0, "No dollar left in the contract");
     // Free allocated memory
     // TODO: Factor out the free functions
     free(failedContract);
@@ -192,16 +227,16 @@ int main() {
     free(payDollarProvider);
     free(whenDepositDollarProvider);
     free(whenDepositAdaProvider);
-    free(wallet1->tokens);
-    free(wallet1);
-    free(wallet2->tokens);
-    free(wallet2);
+    free(walletAdaProviderExternal->tokens);
+    free(walletAdaProviderExternal);
+    free(walletDollarProviderExternal->tokens);
+    free(walletDollarProviderExternal);
     free(internalWallet->accounts);
     free(internalWallet);
-    free(wallet3->tokens);
-    free(wallet3);
-    free(wallet4->tokens);
-    free(wallet4);
+    free(walletAdaProviderInternal->tokens);
+    free(walletAdaProviderInternal);
+    free(walletDollarProviderInternal->tokens);
+    free(walletDollarProviderInternal);
     free(adaProvider);
     free(dollarProvider);
     free(state->parties);
