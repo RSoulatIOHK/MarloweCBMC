@@ -2139,7 +2139,7 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Symex: 1.4416s</text>
+  <text>Runtime Symex: 1.55551s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2155,7 +2155,7 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Postprocess Equation: 0.00483654s</text>
+  <text>Runtime Postprocess Equation: 0.00519467s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2167,7 +2167,7 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Convert SSA: 0.436112s</text>
+  <text>Runtime Convert SSA: 0.467682s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2179,7 +2179,7 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Post-process: 7.208e-06s</text>
+  <text>Runtime Post-process: 7.542e-06s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2195,11 +2195,11 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 2.9738s</text>
+  <text>Runtime Solver: 3.1614s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 3.41043s</text>
+  <text>Runtime decision procedure: 3.62962s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2223,11 +2223,11 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 0.236597s</text>
+  <text>Runtime Solver: 0.258535s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 0.236646s</text>
+  <text>Runtime decision procedure: 0.258588s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2251,11 +2251,11 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 0.18434s</text>
+  <text>Runtime Solver: 0.200431s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 0.184374s</text>
+  <text>Runtime decision procedure: 0.200474s</text>
 </message>
 
 <result property="main.assertion.1" status="FAILURE">

@@ -2143,7 +2143,7 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Symex: 1.48859s</text>
+  <text>Runtime Symex: 1.57721s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2155,7 +2155,7 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Postprocess Equation: 0.00508979s</text>
+  <text>Runtime Postprocess Equation: 0.00501992s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2167,7 +2167,7 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Convert SSA: 0.457875s</text>
+  <text>Runtime Convert SSA: 0.482132s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2179,7 +2179,7 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Post-process: 8.166e-06s</text>
+  <text>Runtime Post-process: 7.583e-06s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2195,11 +2195,11 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 3.02358s</text>
+  <text>Runtime Solver: 3.23342s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 3.4838s</text>
+  <text>Runtime decision procedure: 3.71861s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2219,11 +2219,11 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 0.107088s</text>
+  <text>Runtime Solver: 0.122513s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 0.107254s</text>
+  <text>Runtime decision procedure: 0.122775s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2243,35 +2243,11 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 0.0943817s</text>
+  <text>Runtime Solver: 0.104739s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 0.094543s</text>
-</message>
-
-<message type="STATUS-MESSAGE">
-  <text>Running propositional reduction</text>
-</message>
-
-<message type="STATUS-MESSAGE">
-  <text>Solving with MiniSAT 2.2.1 with simplifier</text>
-</message>
-
-<message type="STATUS-MESSAGE">
-  <text>638127 variables, 589727 clauses</text>
-</message>
-
-<message type="STATUS-MESSAGE">
-  <text>SAT checker: instance is SATISFIABLE</text>
-</message>
-
-<message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 0.0673819s</text>
-</message>
-
-<message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 0.0675434s</text>
+  <text>Runtime decision procedure: 0.104972s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2291,11 +2267,11 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 0.0976698s</text>
+  <text>Runtime Solver: 0.07434s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 0.097834s</text>
+  <text>Runtime decision procedure: 0.074551s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2315,11 +2291,35 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 0.0248352s</text>
+  <text>Runtime Solver: 0.10806s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 0.0249847s</text>
+  <text>Runtime decision procedure: 0.108282s</text>
+</message>
+
+<message type="STATUS-MESSAGE">
+  <text>Running propositional reduction</text>
+</message>
+
+<message type="STATUS-MESSAGE">
+  <text>Solving with MiniSAT 2.2.1 with simplifier</text>
+</message>
+
+<message type="STATUS-MESSAGE">
+  <text>638127 variables, 589727 clauses</text>
+</message>
+
+<message type="STATUS-MESSAGE">
+  <text>SAT checker: instance is SATISFIABLE</text>
+</message>
+
+<message type="STATUS-MESSAGE">
+  <text>Runtime Solver: 0.0270229s</text>
+</message>
+
+<message type="STATUS-MESSAGE">
+  <text>Runtime decision procedure: 0.0271853s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2339,35 +2339,11 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 0.00977542s</text>
+  <text>Runtime Solver: 0.0106802s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 0.00992025s</text>
-</message>
-
-<message type="STATUS-MESSAGE">
-  <text>Running propositional reduction</text>
-</message>
-
-<message type="STATUS-MESSAGE">
-  <text>Solving with MiniSAT 2.2.1 with simplifier</text>
-</message>
-
-<message type="STATUS-MESSAGE">
-  <text>638127 variables, 585038 clauses</text>
-</message>
-
-<message type="STATUS-MESSAGE">
-  <text>SAT checker: instance is SATISFIABLE</text>
-</message>
-
-<message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 0.066315s</text>
-</message>
-
-<message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 0.0664944s</text>
+  <text>Runtime decision procedure: 0.0108618s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2387,11 +2363,11 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 0.0657793s</text>
+  <text>Runtime Solver: 0.0727412s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 0.0659328s</text>
+  <text>Runtime decision procedure: 0.0729811s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2411,11 +2387,35 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 0.0681502s</text>
+  <text>Runtime Solver: 0.0729621s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 0.0683139s</text>
+  <text>Runtime decision procedure: 0.0731732s</text>
+</message>
+
+<message type="STATUS-MESSAGE">
+  <text>Running propositional reduction</text>
+</message>
+
+<message type="STATUS-MESSAGE">
+  <text>Solving with MiniSAT 2.2.1 with simplifier</text>
+</message>
+
+<message type="STATUS-MESSAGE">
+  <text>638127 variables, 585038 clauses</text>
+</message>
+
+<message type="STATUS-MESSAGE">
+  <text>SAT checker: instance is SATISFIABLE</text>
+</message>
+
+<message type="STATUS-MESSAGE">
+  <text>Runtime Solver: 0.076457s</text>
+</message>
+
+<message type="STATUS-MESSAGE">
+  <text>Runtime decision procedure: 0.0766696s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
@@ -2435,11 +2435,11 @@ ignoring new value in module &lt;built-in-library&gt; file &lt;built-in-addition
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime Solver: 0.0388501s</text>
+  <text>Runtime Solver: 0.0429352s</text>
 </message>
 
 <message type="STATUS-MESSAGE">
-  <text>Runtime decision procedure: 0.0388821s</text>
+  <text>Runtime decision procedure: 0.0429741s</text>
 </message>
 
 <goal description="block 1 (lines src/main.c:main:32-35,37-40,43,44)" id="main.coverage.1" status="SATISFIED">
