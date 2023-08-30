@@ -1,0 +1,111 @@
+{
+  "viewer-loop": {
+    "loops": {
+      "getTotalAda.0": {
+        "file": "getters.c",
+        "function": "getTotalAda",
+        "line": 30
+      },
+      "getTotalAda.1": {
+        "file": "getters.c",
+        "function": "getTotalAda",
+        "line": 28
+      },
+      "getTotalDollars.0": {
+        "file": "getters.c",
+        "function": "getTotalDollars",
+        "line": 43
+      },
+      "getTotalDollars.1": {
+        "file": "getters.c",
+        "function": "getTotalDollars",
+        "line": 41
+      },
+      "main.0": {
+        "file": "main.c",
+        "function": "main",
+        "line": 166
+      },
+      "makeDeposit.0": {
+        "file": "deposit.c",
+        "function": "makeDeposit",
+        "line": 22
+      },
+      "makeDeposit.1": {
+        "file": "deposit.c",
+        "function": "makeDeposit",
+        "line": 38
+      },
+      "makePayment.0": {
+        "file": "payment.c",
+        "function": "makePayment",
+        "line": 31
+      },
+      "makePayment.1": {
+        "file": "payment.c",
+        "function": "makePayment",
+        "line": 45
+      },
+      "makePayment.2": {
+        "file": "payment.c",
+        "function": "makePayment",
+        "line": 57
+      },
+      "makePayment.3": {
+        "file": "payment.c",
+        "function": "makePayment",
+        "line": 64
+      },
+      "prettyPrintWholeContractState.0": {
+        "file": "printers.c",
+        "function": "prettyPrintWholeContractState",
+        "line": 31
+      },
+      "prettyPrintWholeContractState.1": {
+        "file": "printers.c",
+        "function": "prettyPrintWholeContractState",
+        "line": 29
+      },
+      "prettyPrintWholeContractState.2": {
+        "file": "printers.c",
+        "function": "prettyPrintWholeContractState",
+        "line": 41
+      },
+      "prettyPrintWholeContractState.3": {
+        "file": "printers.c",
+        "function": "prettyPrintWholeContractState",
+        "line": 49
+      },
+      "prettyPrintWholeContractState.4": {
+        "file": "printers.c",
+        "function": "prettyPrintWholeContractState",
+        "line": 39
+      },
+      "processClose.0": {
+        "file": "close.c",
+        "function": "processClose",
+        "line": 15
+      },
+      "processClose.1": {
+        "file": "close.c",
+        "function": "processClose",
+        "line": 25
+      },
+      "processClose.2": {
+        "file": "close.c",
+        "function": "processClose",
+        "line": 23
+      },
+      "processClose.3": {
+        "file": "close.c",
+        "function": "processClose",
+        "line": 34
+      },
+      "processClose.4": {
+        "file": "close.c",
+        "function": "processClose",
+        "line": 10
+      }
+    }
+  }
+}

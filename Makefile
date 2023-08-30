@@ -8,6 +8,7 @@ INCDIR := include
 SOURCES := $(wildcard $(SRCDIR)/*.c)
 OBJECTS := $(patsubst $(SRCDIR)/%.c, $(SRCDIR)/%.o, $(SOURCES))
 CBMC_OPT := --object-bits 10
+GOTO_NAME := main.goto
 
 # Output binary and build directory
 BUILDDIR := build
@@ -37,10 +38,26 @@ clean:
 
 # CBMC Analysis target
 verify:
-	echo $(DOG) # Contribution by Aliénor S.
-	goto-cc -o $(BUILDDIR)/main.goto $(SRCDIR)/*.c -I$(INCDIR)
-	-cbmc $(BUILDDIR)/main.goto $(CBMC_OPT) --trace --xml-ui > $(REPORTDIR)/result.xml
-	cbmc $(BUILDDIR)/main.goto $(CBMC_OPT) --cover location -xml-ui > $(REPORTDIR)/coverage.xml
-	cbmc $(BUILDDIR)/main.goto $(CBMC_OPT) --show-properties --xml-ui > $(REPORTDIR)/properties.xml
-	cbmc-viewer --goto $(BUILDDIR)/main.goto --result $(REPORTDIR)/result.xml --coverage $(REPORTDIR)/coverage.xml --property $(REPORTDIR)/properties.xml --srcdir $(SRCDIR) 
+	@echo "-------------------------------------------"
+	@echo "Marlowe Bounded Model Checking Analysis"
+	@echo "Currently only for the Marlowe Swap contract"
+	@echo "Author: Romain Soulat"
+	@echo "version: 0.0.1"
+	@echo "-------------------------------------------"
+	@echo $(DOG) # Contribution by Aliénor
+	@echo " "
+	@echo "-------------------------------------------"
+	@echo "Notice:"
+	@echo "Model of the ledger is very "
+	@echo "Compiling the C code to goto format for analysis:"
+	@goto-cc -o $(BUILDDIR)/$(GOTO_NAME) $(SRCDIR)/*.c -I$(INCDIR)
+	@echo "Running CBMC analysis:"
+	@echo "  - Generating result file"
+	-@cbmc $(BUILDDIR)/$(GOTO_NAME) $(CBMC_OPT) --trace --xml-ui > $(REPORTDIR)/result.xml
+	@echo "  - Generating coverage file"
+	@cbmc $(BUILDDIR)/$(GOTO_NAME) $(CBMC_OPT) --cover location -xml-ui > $(REPORTDIR)/coverage.xml
+	@echo "  - Generating properties file"
+	@cbmc $(BUILDDIR)/$(GOTO_NAME) $(CBMC_OPT) --show-properties --xml-ui > $(REPORTDIR)/properties.xml
+	@echo "  - Generating HTML report:"
+	@cbmc-viewer --goto $(BUILDDIR)/$(GOTO_NAME) --result $(REPORTDIR)/result.xml --coverage $(REPORTDIR)/coverage.xml --property $(REPORTDIR)/properties.xml --srcdir $(SRCDIR) 
 	open $(REPORTDIR)/html/index.html

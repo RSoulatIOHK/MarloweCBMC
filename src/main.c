@@ -24,10 +24,20 @@ typedef struct {
 
 int main() {
     // Define the tokens for internal accounts
-    Token adaAdaProviderInternal = {.currency = ADA, .amount = constr_non_det_int(0,0)};
-    Token dollarAdaProviderInternal = {.currency = DOLLAR, .amount = constr_non_det_int(0,0)};
-    Token adaDollarProviderInternal = {.currency = ADA, .amount = constr_non_det_int(0,0)};
-    Token dollarDollarProviderInternal = {.currency = DOLLAR, .amount = constr_non_det_int(0,0)};
+    // int initialAda_AdaHolder_Internal = constr_non_det_int(0,0);
+    // int initialDollar_AdaHolder_Internal = constr_non_det_int(0,0);
+    // int initialAda_DollarHolder_Internal = constr_non_det_int(0,0);
+    // int initialDollar_DollarHolder_Internal = constr_non_det_int(0,0);
+    
+    int initialAda_AdaHolder_Internal = 0;
+    int initialDollar_AdaHolder_Internal = 0;
+    int initialAda_DollarHolder_Internal = 0;
+    int initialDollar_DollarHolder_Internal = 0;
+    
+    Token adaAdaProviderInternal = {.currency = ADA, .amount = initialAda_AdaHolder_Internal};
+    Token dollarAdaProviderInternal = {.currency = DOLLAR, .amount = initialDollar_AdaHolder_Internal};
+    Token adaDollarProviderInternal = {.currency = ADA, .amount = initialAda_DollarHolder_Internal};
+    Token dollarDollarProviderInternal = {.currency = DOLLAR, .amount = initialDollar_DollarHolder_Internal};
 
     // Define the wallets for internal accounts
     Token tokensAdaProviderInternal[] = {adaAdaProviderInternal, dollarAdaProviderInternal};
@@ -45,10 +55,15 @@ int main() {
     InternalWallet* internalWallet = newInternalWallet(accounts, 2);
 
     // Define the tokens for external wallets
-    Token adaAdaProviderExternal = {.currency = ADA, .amount = constr_non_det_int(0,100)};
-    Token dollarAdaProviderExternal = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
-    Token adaDollarProviderExternal = {.currency = ADA, .amount = constr_non_det_int(0,100)};
-    Token dollarDollarProviderExternal = {.currency = DOLLAR, .amount = constr_non_det_int(0,100)};
+    int initialAda_AdaHolder = constr_non_det_int(0,100);
+    int initialDollar_AdaHolder = constr_non_det_int(0,100);
+    int initialAda_DollarHolder = constr_non_det_int(0,100);
+    int initialDollar_DollarHolder = constr_non_det_int(0,100);
+
+    Token adaAdaProviderExternal = {.currency = ADA, .amount = initialAda_AdaHolder };
+    Token dollarAdaProviderExternal = {.currency = DOLLAR, .amount = initialDollar_AdaHolder};
+    Token adaDollarProviderExternal = {.currency = ADA, .amount = initialAda_DollarHolder};
+    Token dollarDollarProviderExternal = {.currency = DOLLAR, .amount = initialDollar_DollarHolder};
     
     // Define the wallets for external wallets
     Token tokensAdaProviderExternal[] = {adaDollarProviderExternal, dollarAdaProviderExternal};
@@ -206,41 +221,80 @@ int main() {
     int finalTotalAda = getTotalAda(state);
     int finalTotalDollar = getTotalDollars(state);
 
-    // Those are various properties
-    // Mainly to debug modeling
+    // Dead code check
+    // Is expected to fail
+    // If not, the properties are dead code and will evaluate true no matter what
     int reach = 1;
     __CPROVER_assert(reach == 0, "Are the properties dead-code -- needs to fail");
     
+    // Test case generation examples
+    // Can be made more complex by having more coverage criteria added in the model
     __CPROVER_assert(success == 0, "Impossible to get a successful contract");
     __CPROVER_assert(success == 1, "Impossible to get a failing contract");
+
+    // General properties
+    // Mainly used to show that I didn't mess up (too much) the modeling
     __CPROVER_assert(initialTotalAda == finalTotalAda, "Ada are preserved!");
     __CPROVER_assert(initialTotalDollar == finalTotalDollar, "Dollar are preserved!");
+
+    // Marlowe assertions
+    
+    // Marlowe is expecte to always end on a close contract
+    // All close contracts are expected to change success to something other than -1
     __CPROVER_assert(success != -1, "Always finish on a Close contract");
+
     // Check that the internal accounts are all empty
     __CPROVER_assert(adaAdaProviderInternal.amount == 0 && adaDollarProviderInternal.amount == 0, "No ada left in the contract");
     __CPROVER_assert(dollarAdaProviderInternal.amount == 0 && dollarDollarProviderInternal.amount == 0, "No dollar left in the contract");
+    
+
+    // Functional correctness of the SWAP contract
+
+    // If the contract is succesful, funds were transfered properly
+    // If not, the funds have not been transfered but whatever was inside the contract
+    // for some unknown reasons at the beginning, have been correctly returned
+    // __CPROVER_assert((success != 0) || (adaAdaProviderExternal.amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal - template.amountAda), "Try: Ada Provider has received back their funds and has sent away the requested ada");
+            
+    // switch (success){
+    //     case 0:
+    //         __CPROVER_assert(adaAdaProviderExternal.amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal - template.amountAda, "Ada Provider has received back their funds and has sent away the requested ada");
+    //         __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_AdaHolder + initialDollar_AdaHolder_Internal + template.amountDollar, "Ada Provider has received back their funds and the requested dollars");
+    //         __CPROVER_assert(adaDollarProviderExternal.amount == initialAda_DollarHolder + initialAda_DollarHolder_Internal + template.amountAda, "Dollar Provider has received back their funds and the requested ada");
+    //         __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_DollarHolder + initialDollar_DollarHolder_Internal - template.amountDollar, "Dollar Provider has received back their funds and sent away the requested dollars");
+    //         break;
+    //     case 1:
+    //         __CPROVER_assert(adaAdaProviderExternal.amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal, "Ada Provider has received back their ada funds as the contract has failed");
+    //         __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_AdaHolder + initialDollar_AdaHolder_Internal, "Ada Provider has received back their dollar funds as the contract has failed");
+    //         __CPROVER_assert(adaDollarProviderExternal.amount == initialAda_DollarHolder + initialAda_DollarHolder_Internal, "Dollar Provider has received back their ada funds as the contract has failed");
+    //         __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_DollarHolder + initialDollar_DollarHolder_Internal, "Dollar Provider has received back their dollar funds as the contract has failed");
+
+    //         break;
+    //     default:
+    //         __CPROVER_assert(1==0, "UNKNOWN ERROR, SUCCESS IS DIFFERENT FROM WHAT POSSIBLE");
+    // }
     // Free allocated memory
     // TODO: Factor out the free functions
-    free(failedContract);
-    free(successContract);
-    free(payAdaProvider);
-    free(payDollarProvider);
-    free(whenDepositDollarProvider);
-    free(whenDepositAdaProvider);
-    free(walletAdaProviderExternal->tokens);
-    free(walletAdaProviderExternal);
-    free(walletDollarProviderExternal->tokens);
-    free(walletDollarProviderExternal);
-    free(internalWallet->accounts);
-    free(internalWallet);
-    free(walletAdaProviderInternal->tokens);
-    free(walletAdaProviderInternal);
-    free(walletDollarProviderInternal->tokens);
-    free(walletDollarProviderInternal);
-    free(adaProvider);
-    free(dollarProvider);
-    free(state->parties);
-    free(state);
+
+    // free(failedContract);
+    // free(successContract);
+    // free(payAdaProvider);
+    // free(payDollarProvider);
+    // free(whenDepositDollarProvider);
+    // free(whenDepositAdaProvider);
+    // free(walletAdaProviderExternal->tokens);
+    // free(walletAdaProviderExternal);
+    // free(walletDollarProviderExternal->tokens);
+    // free(walletDollarProviderExternal);
+    // free(internalWallet->accounts);
+    // free(internalWallet);
+    // free(walletAdaProviderInternal->tokens);
+    // free(walletAdaProviderInternal);
+    // free(walletDollarProviderInternal->tokens);
+    // free(walletDollarProviderInternal);
+    // free(adaProvider);
+    // free(dollarProvider);
+    // free(state->parties);
+    // free(state);
 
     return res_ret;
 }
