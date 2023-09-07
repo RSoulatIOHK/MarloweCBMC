@@ -62,7 +62,7 @@ int makeDeposit(ContractState* state, const Transaction* candidateTransaction, c
 
         // Deduct the payment amount from the source external wallet
         // __CPROVER_assume(sourceParty->wallet.numTokens == 2);
-        printf("DEBUG: NumTokens is %d\n", NUMTOKENS);
+        // printf("DEBUG: NumTokens is %d\n", NUMTOKENS);
         if (sourceParty->wallet.tokens[0].currency == candidateTransaction->currency) {
             sourceParty->wallet.tokens[0].amount -= candidateTransaction->amount;
         }
@@ -70,21 +70,21 @@ int makeDeposit(ContractState* state, const Transaction* candidateTransaction, c
             sourceParty->wallet.tokens[1].amount -= candidateTransaction->amount;
         }
 
-        printf("Deposit processed:\n");
-        printf("Source: %s (Wallet ID: %d)\n", candidateTransaction->source->name, sourceParty->id);
-        printf("Destination: %s (Internal Account ID: %d)\n", candidateTransaction->destination->name, destinationAccount->id);
-        printf("Amount: %d\n", candidateTransaction->amount);
-        printf("Currency: %s\n", getCurrencyTypeName(candidateTransaction->currency));
+        // printf("Deposit processed:\n");
+        // printf("Source: %s (Wallet ID: %d)\n", candidateTransaction->source->name, sourceParty->id);
+        // printf("Destination: %s (Internal Account ID: %d)\n", candidateTransaction->destination->name, destinationAccount->id);
+        // printf("Amount: %d\n", candidateTransaction->amount);
+        // printf("Currency: %s\n", getCurrencyTypeName(candidateTransaction->currency));
 
         // Move the contract to the subContractOK pointer
-        state->currentContract = state->currentContract->subContractOK;
+        // state->currentContract = state->currentContract->subContractOK;
         return 0; // Deposit successful
     } else {
         printf("Invalid transaction! Deposit failed.\n");
 
         // Move the contract to the continueAs pointer
         // TODO: Remove this when the timeout is added, as it's not the correct semantics
-        state->currentContract = state->currentContract->continueAs;
+        // state->currentContract = state->currentContract->continueAs;
         return 1; // Deposit failed
     }
 }

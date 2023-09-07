@@ -207,8 +207,12 @@ int main() {
                     };
                     int res = makeDeposit(state, &depositTransaction, &(state->currentContract->params.depositParams));
                     // Handle errors
-                    // Most of the error handling has been moved to the makeDeposit function
-                    if (res == 0){}else{}
+                    if (res == 1){
+                        state->currentContract = state->currentContract->continueAs;
+                        }
+                    else{
+                        state->currentContract = state->currentContract->subContractOK;
+                        }
                 }
                 break;
             }
@@ -255,23 +259,23 @@ int main() {
     // for some unknown reasons at the beginning, have been correctly returned
     // __CPROVER_assert((success != 0) || (adaAdaProviderExternal.amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal - template.amountAda), "Try: Ada Provider has received back their funds and has sent away the requested ada");
             
-    // switch (success){
-    //     case 0:
-    //         __CPROVER_assert(adaAdaProviderExternal.amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal - template.amountAda, "Ada Provider has received back their funds and has sent away the requested ada");
-    //         __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_AdaHolder + initialDollar_AdaHolder_Internal + template.amountDollar, "Ada Provider has received back their funds and the requested dollars");
-    //         __CPROVER_assert(adaDollarProviderExternal.amount == initialAda_DollarHolder + initialAda_DollarHolder_Internal + template.amountAda, "Dollar Provider has received back their funds and the requested ada");
-    //         __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_DollarHolder + initialDollar_DollarHolder_Internal - template.amountDollar, "Dollar Provider has received back their funds and sent away the requested dollars");
-    //         break;
-    //     case 1:
-    //         __CPROVER_assert(adaAdaProviderExternal.amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal, "Ada Provider has received back their ada funds as the contract has failed");
-    //         __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_AdaHolder + initialDollar_AdaHolder_Internal, "Ada Provider has received back their dollar funds as the contract has failed");
-    //         __CPROVER_assert(adaDollarProviderExternal.amount == initialAda_DollarHolder + initialAda_DollarHolder_Internal, "Dollar Provider has received back their ada funds as the contract has failed");
-    //         __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_DollarHolder + initialDollar_DollarHolder_Internal, "Dollar Provider has received back their dollar funds as the contract has failed");
+    switch (success){
+        case 0:
+            __CPROVER_assert(adaAdaProviderExternal.amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal - template.amountAda, "Ada Provider has received back their funds and has sent away the requested ada");
+            __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_AdaHolder + initialDollar_AdaHolder_Internal + template.amountDollar, "Ada Provider has received back their funds and the requested dollars");
+            __CPROVER_assert(adaDollarProviderExternal.amount == initialAda_DollarHolder + initialAda_DollarHolder_Internal + template.amountAda, "Dollar Provider has received back their funds and the requested ada");
+            __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_DollarHolder + initialDollar_DollarHolder_Internal - template.amountDollar, "Dollar Provider has received back their funds and sent away the requested dollars");
+            break;
+        case 1:
+            __CPROVER_assert(adaAdaProviderExternal.amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal, "Ada Provider has received back their ada funds as the contract has failed");
+            __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_AdaHolder + initialDollar_AdaHolder_Internal, "Ada Provider has received back their dollar funds as the contract has failed");
+            __CPROVER_assert(adaDollarProviderExternal.amount == initialAda_DollarHolder + initialAda_DollarHolder_Internal, "Dollar Provider has received back their ada funds as the contract has failed");
+            __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_DollarHolder + initialDollar_DollarHolder_Internal, "Dollar Provider has received back their dollar funds as the contract has failed");
 
-    //         break;
-    //     default:
-    //         __CPROVER_assert(1==0, "UNKNOWN ERROR, SUCCESS IS DIFFERENT FROM WHAT POSSIBLE");
-    // }
+            break;
+        default:
+            __CPROVER_assert(1==0, "UNKNOWN ERROR, SUCCESS IS DIFFERENT FROM WHAT POSSIBLE");
+    }
     // Free allocated memory
     // TODO: Factor out the free functions
 

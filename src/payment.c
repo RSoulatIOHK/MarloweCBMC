@@ -67,11 +67,11 @@ int makePayment(ContractState* state, const Transaction* candidateTransaction) {
         }
     }
 
-    printf("Payment processed:\n");
-    printf("Source: %s (Internal Account ID: %d)\n", sourceParty->name, sourceAccount->id);
-    printf("Destination: %s (Wallet ID: %d)\n", destinationParty->name, destinationParty->id);
-    printf("Amount: %d\n", candidateTransaction->amount);
-    printf("Currency: %s\n", getCurrencyTypeName(candidateTransaction->currency));
+    // printf("Payment processed:\n");
+    // printf("Source: %s (Internal Account ID: %d)\n", sourceParty->name, sourceAccount->id);
+    // printf("Destination: %s (Wallet ID: %d)\n", destinationParty->name, destinationParty->id);
+    // printf("Amount: %d\n", candidateTransaction->amount);
+    // printf("Currency: %s\n", getCurrencyTypeName(candidateTransaction->currency));
 
     // Move the contract state to the continueAs contract
     state->currentContract = state->currentContract->continueAs;
