@@ -1,11 +1,13 @@
 ./tmp/
+./report/
 ./report/*
 ./.vscode/
 ./src/*.goto
 ./src/*.o
 ./build/
-./report/
-./utxomodel/
+./build/*
+./utxomodel/*
+./utxomodel
 *.o
 *.goto
 *.log
