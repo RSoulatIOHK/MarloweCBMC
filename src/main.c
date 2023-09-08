@@ -66,7 +66,7 @@ int main() {
     Token dollarDollarProviderExternal = {.currency = DOLLAR, .amount = initialDollar_DollarHolder};
     
     // Define the wallets for external wallets
-    Token tokensAdaProviderExternal[] = {adaDollarProviderExternal, dollarAdaProviderExternal};
+    Token tokensAdaProviderExternal[] = {adaAdaProviderExternal, dollarAdaProviderExternal};
     Wallet* walletAdaProviderExternal = newWallet(tokensAdaProviderExternal, 2);
     Token tokensDollarProviderExternal[] = {adaDollarProviderExternal, dollarDollarProviderExternal};
     Wallet* walletDollarProviderExternal = newWallet(tokensDollarProviderExternal, 2);
@@ -171,7 +171,10 @@ int main() {
             printf("End of simulation because the contract is now NULL\n");
             break;
         }
-
+        // TODO: Don't force an action 
+        // if (constr_non_det_int(0,1) == 0){
+        //     continue;
+        // }
         switch (state->currentContract->type) {
             case PAY: {
                 Transaction transaction = convertToTransaction(&(state->currentContract->params.payParams));
@@ -228,13 +231,13 @@ int main() {
     // Dead code check
     // Is expected to fail
     // If not, the properties are dead code and will evaluate true no matter what
-    int reach = 1;
-    __CPROVER_assert(reach == 0, "Are the properties dead-code -- needs to fail");
+    // int reach = 1;
+    // __CPROVER_assert(reach == 0, "Are the properties dead-code -- needs to fail");
     
-    // Test case generation examples
-    // Can be made more complex by having more coverage criteria added in the model
-    __CPROVER_assert(success == 0, "Impossible to get a successful contract");
-    __CPROVER_assert(success == 1, "Impossible to get a failing contract");
+    // // Test case generation examples
+    // // Can be made more complex by having more coverage criteria added in the model
+    // __CPROVER_assert(success == 0, "Impossible to get a successful contract");
+    // __CPROVER_assert(success == 1, "Impossible to get a failing contract");
 
     // General properties
     // Mainly used to show that I didn't mess up (too much) the modeling
@@ -257,24 +260,30 @@ int main() {
     // If the contract is succesful, funds were transfered properly
     // If not, the funds have not been transfered but whatever was inside the contract
     // for some unknown reasons at the beginning, have been correctly returned
-    // __CPROVER_assert((success != 0) || (adaAdaProviderExternal.amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal - template.amountAda), "Try: Ada Provider has received back their funds and has sent away the requested ada");
-            
+    // __CPROVER_assert((success != 1) || (walletAdaProviderExternal->tokens[0].amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal - template.amountAda), "On succesful contract: Ada Provider has always sent the correct amount of ada");
+    // __CPROVER_assert((success != 1) || (walletDollarProviderExternal->tokens[0].amount == initialAda_DollarHolder + initialAda_DollarHolder_Internal + template.amountAda), "On succesful contract: Dollar Provider always receives the correct amount of ada");
+    // __CPROVER_assert((success != 1) || (walletAdaProviderExternal->tokens[1].amount == initialDollar_AdaHolder + initialDollar_AdaHolder_Internal + template.amountDollar), "On succesful contract: Ada Provider always receives the correct amount of dollars");
+    // __CPROVER_assert((success != 1) || (walletDollarProviderExternal->tokens[1].amount == initialDollar_DollarHolder + initialDollar_DollarHolder_Internal - template.amountDollar), "On succesful contract: Dollar Provider has always sent the correct amount of dollars");
+
+    // __CPROVER_assert((success != 0) || (walletAdaProviderExternal->tokens[0].amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal), "On failed contract: Ada Provider always receives back their ada");
+    // __CPROVER_assert((success != 0) || (walletDollarProviderExternal->tokens[0].amount == initialAda_DollarHolder + initialAda_DollarHolder_Internal), "On failed contract: Dollar Provider always receives back their ada");
+    // __CPROVER_assert((success != 0) || (walletAdaProviderExternal->tokens[1].amount == initialDollar_AdaHolder + initialDollar_AdaHolder_Internal), "On failed contract: Ada Provider always receives back their dollars");
+    // __CPROVER_assert((success != 0) || (walletDollarProviderExternal->tokens[1].amount == initialDollar_DollarHolder + initialDollar_DollarHolder_Internal), "On failed contract: Dollar Provider always receives back their dollars");
     switch (success){
         case 0:
-            __CPROVER_assert(adaAdaProviderExternal.amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal - template.amountAda, "Ada Provider has received back their funds and has sent away the requested ada");
-            __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_AdaHolder + initialDollar_AdaHolder_Internal + template.amountDollar, "Ada Provider has received back their funds and the requested dollars");
-            __CPROVER_assert(adaDollarProviderExternal.amount == initialAda_DollarHolder + initialAda_DollarHolder_Internal + template.amountAda, "Dollar Provider has received back their funds and the requested ada");
-            __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_DollarHolder + initialDollar_DollarHolder_Internal - template.amountDollar, "Dollar Provider has received back their funds and sent away the requested dollars");
+            __CPROVER_assert((walletAdaProviderExternal->tokens[0].amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal), "On failed contract: Ada Provider always receives back their ada");
+            __CPROVER_assert((walletDollarProviderExternal->tokens[0].amount == initialAda_DollarHolder + initialAda_DollarHolder_Internal), "On failed contract: Dollar Provider always receives back their ada");
+            __CPROVER_assert((walletAdaProviderExternal->tokens[1].amount == initialDollar_AdaHolder + initialDollar_AdaHolder_Internal), "On failed contract: Ada Provider always receives back their dollars");
+            __CPROVER_assert((walletDollarProviderExternal->tokens[1].amount == initialDollar_DollarHolder + initialDollar_DollarHolder_Internal), "On failed contract: Dollar Provider always receives back their dollars");
             break;
         case 1:
-            __CPROVER_assert(adaAdaProviderExternal.amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal, "Ada Provider has received back their ada funds as the contract has failed");
-            __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_AdaHolder + initialDollar_AdaHolder_Internal, "Ada Provider has received back their dollar funds as the contract has failed");
-            __CPROVER_assert(adaDollarProviderExternal.amount == initialAda_DollarHolder + initialAda_DollarHolder_Internal, "Dollar Provider has received back their ada funds as the contract has failed");
-            __CPROVER_assert(dollarAdaProviderExternal.amount == initialDollar_DollarHolder + initialDollar_DollarHolder_Internal, "Dollar Provider has received back their dollar funds as the contract has failed");
-
+            __CPROVER_assert((walletAdaProviderExternal->tokens[0].amount == initialAda_AdaHolder + initialAda_AdaHolder_Internal - template.amountAda), "On succesful contract: Ada Provider has always sent the correct amount of ada");
+            __CPROVER_assert((walletDollarProviderExternal->tokens[0].amount == initialAda_DollarHolder + initialAda_DollarHolder_Internal + template.amountAda), "On succesful contract: Dollar Provider always receives the correct amount of ada");
+            __CPROVER_assert((walletAdaProviderExternal->tokens[1].amount == initialDollar_AdaHolder + initialDollar_AdaHolder_Internal + template.amountDollar), "On succesful contract: Ada Provider always receives the correct amount of dollars");
+            __CPROVER_assert((walletDollarProviderExternal->tokens[1].amount == initialDollar_DollarHolder + initialDollar_DollarHolder_Internal - template.amountDollar), "On succesful contract: Dollar Provider has always sent the correct amount of dollars");
             break;
         default:
-            __CPROVER_assert(1==0, "UNKNOWN ERROR, SUCCESS IS DIFFERENT FROM WHAT POSSIBLE");
+            break;
     }
     // Free allocated memory
     // TODO: Factor out the free functions

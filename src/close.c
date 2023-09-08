@@ -7,6 +7,7 @@
 
 void processClose(ContractState* state) {
     // Iterate over each internal account
+    printf("Closing contract...\n");
     for (int i = 0; i < state->internalWallet.numAccounts; i++) {
         InternalAccount* account = &(state->internalWallet.accounts[i]);
 
@@ -20,10 +21,12 @@ void processClose(ContractState* state) {
         }
 
         // Refund the tokens from the internal account to the external wallet
+        // printf("Processing close for party %d\n", account->id);
         for (int j = 0; j < account->wallet.numTokens; j++) {
             Token* token = &(account->wallet.tokens[j]);
             for (int k = 0; k < externalParty->wallet.numTokens; k++) {
                 if (externalParty->wallet.tokens[k].currency == token->currency) {
+                    // printf("Refunding %d %s tokens to party %d\n", token->amount, token->currency, externalParty->id);
                     externalParty->wallet.tokens[k].amount += token->amount;
                     break;
                 }
